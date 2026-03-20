@@ -1,0 +1,268 @@
+---
+title: "Latest Papers"
+description: "Live feed from OpenAlex — recent publications in infectious disease and related fields."
+toc: false
+page-layout: full
+---
+
+Results pulled live from [OpenAlex](https://openalex.org) each time you load this page. Use the filters to narrow by topic, journal, or date.
+
+```{=html}
+<style>
+  .oa-filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 1.5rem 0 1rem; }
+  .oa-filter-group { display: flex; flex-direction: column; gap: 4px; }
+  .oa-filter-group label { font-size: 12px; color: #666; font-weight: 500; }
+  .oa-filter-group select, .oa-filter-group input { padding: 6px 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; background: white; }
+  .concept-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.75rem 0 1.25rem; }
+  .concept-tag { font-size: 12px; padding: 3px 10px; border-radius: 20px; background: #f0f0f0; color: #444; cursor: pointer; border: 1px solid #ddd; transition: all 0.15s; }
+  .concept-tag.active { background: #2c3e50; color: white; border-color: #2c3e50; }
+  .oa-actions { display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center; }
+  .btn-search { background: #2c3e50; color: white; border: none; padding: 8px 22px; border-radius: 6px; font-size: 14px; cursor: pointer; }
+  .btn-search:hover { background: #3d5166; }
+  .btn-search:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-outline { background: none; color: #2c3e50; border: 1px solid #2c3e50; padding: 8px 16px; border-radius: 6px; font-size: 13px; cursor: pointer; }
+  .btn-outline:hover { background: #f5f5f5; }
+  .oa-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+  .stat-box { background: #f8f9fa; border-radius: 8px; padding: 0.75rem 1rem; }
+  .stat-box .label { font-size: 11px; color: #888; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .stat-box .value { font-size: 22px; font-weight: 600; color: #2c3e50; }
+  .paper-list { display: flex; flex-direction: column; gap: 10px; }
+  .paper-card { background: white; border: 1px solid #e8e8e8; border-radius: 10px; padding: 1rem 1.25rem; transition: border-color 0.15s; }
+  .paper-card:hover { border-color: #bbb; }
+  .paper-card .title { font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 5px; line-height: 1.45; }
+  .paper-card .title a { color: inherit; text-decoration: none; }
+  .paper-card .title a:hover { color: #2980b9; }
+  .paper-card .authors { font-size: 12px; color: #666; margin-bottom: 8px; }
+  .paper-card .meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .badge { font-size: 11px; padding: 2px 9px; border-radius: 20px; }
+  .badge-journal { background: #e8f4fd; color: #1a6fa8; }
+  .badge-oa { background: #e8f8f0; color: #1a7a45; }
+  .badge-year { background: #f0f0f0; color: #555; }
+  .badge-cite { background: #f0f0f0; color: #555; }
+  .oa-status { text-align: center; padding: 2rem 0; color: #888; font-size: 14px; }
+  .oa-error { padding: 1rem; background: #fef2f2; border: 1px solid #fca5a5; border-radius: 8px; color: #b91c1c; font-size: 13px; margin-bottom: 1rem; }
+  .pagination { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 1.5rem; }
+  .page-btn { background: white; border: 1px solid #ddd; border-radius: 6px; padding: 6px 16px; font-size: 13px; cursor: pointer; }
+  .page-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+  .page-info { font-size: 13px; color: #666; }
+  .section-label { font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+  hr.oa-divider { border: none; border-top: 1px solid #eee; margin: 1rem 0; }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .oa-filter-group label { color: #aaa; }
+    .oa-filter-group select, .oa-filter-group input { background: #2a2a2a; border-color: #444; color: #eee; }
+    .concept-tag { background: #2a2a2a; color: #ccc; border-color: #444; }
+    .concept-tag.active { background: #4a9eff; color: white; border-color: #4a9eff; }
+    .btn-search { background: #4a9eff; }
+    .btn-outline { color: #4a9eff; border-color: #4a9eff; }
+    .stat-box { background: #1e1e1e; }
+    .stat-box .value { color: #eee; }
+    .paper-card { background: #1e1e1e; border-color: #333; }
+    .paper-card .title { color: #eee; }
+    .paper-card .authors { color: #aaa; }
+    .badge-year, .badge-cite { background: #2a2a2a; color: #aaa; }
+    .page-btn { background: #1e1e1e; border-color: #444; color: #eee; }
+  }
+</style>
+
+<div class="section-label">Filter by topic</div>
+<div class="concept-tags" id="conceptTags">
+  <span class="concept-tag active" data-id="C524204448">Infectious disease</span>
+  <span class="concept-tag" data-id="C398037181">Antimicrobial resistance</span>
+  <span class="concept-tag" data-id="C185592680">Epidemiology</span>
+  <span class="concept-tag" data-id="C509974204">Virology</span>
+  <span class="concept-tag" data-id="C150903083">Immunology</span>
+  <span class="concept-tag" data-id="C203014093">Tropical disease</span>
+  <span class="concept-tag" data-id="C142724271">Vaccination</span>
+</div>
+
+<hr class="oa-divider">
+
+<div class="oa-filters">
+  <div class="oa-filter-group">
+    <label>From date</label>
+    <input type="date" id="fromDate">
+  </div>
+  <div class="oa-filter-group">
+    <label>To date</label>
+    <input type="date" id="toDate">
+  </div>
+  <div class="oa-filter-group">
+    <label>Journal</label>
+    <select id="journalFilter">
+      <option value="">All journals</option>
+      <option value="S1473309914704788">Lancet Infectious Diseases</option>
+      <option value="S199032827">Clinical Infectious Diseases</option>
+      <option value="S25955">Emerging Infectious Diseases (CDC)</option>
+      <option value="S136199494">Journal of Infectious Diseases</option>
+      <option value="S1553734">PLOS Pathogens</option>
+      <option value="S2633960">Nature Microbiology</option>
+    </select>
+  </div>
+  <div class="oa-filter-group">
+    <label>Access</label>
+    <select id="oaFilter">
+      <option value="">All papers</option>
+      <option value="true">Open access only</option>
+    </select>
+  </div>
+  <div class="oa-filter-group">
+    <label>Sort by</label>
+    <select id="sortFilter">
+      <option value="publication_date:desc">Newest first</option>
+      <option value="cited_by_count:desc">Most cited</option>
+    </select>
+  </div>
+  <div class="oa-filter-group">
+    <label>Per page</label>
+    <select id="perPage">
+      <option value="10">10</option>
+      <option value="25" selected>25</option>
+      <option value="50">50</option>
+    </select>
+  </div>
+</div>
+
+<div class="oa-actions">
+  <button class="btn-search" id="searchBtn" onclick="doSearch()">Search OpenAlex</button>
+  <button class="btn-outline" onclick="openInBrowser()">View raw API ↗</button>
+</div>
+
+<div id="oaError" class="oa-error" style="display:none"></div>
+<div id="oaStatus" class="oa-status">Select topics above and click Search</div>
+
+<div class="oa-stats" id="oaStats" style="display:none">
+  <div class="stat-box"><div class="label">Total results</div><div class="value" id="statTotal">—</div></div>
+  <div class="stat-box"><div class="label">Open access on this page</div><div class="value" id="statOA">—</div></div>
+  <div class="stat-box"><div class="label">Page</div><div class="value" id="statPage">—</div></div>
+</div>
+
+<div class="paper-list" id="paperList"></div>
+
+<div class="pagination" id="oaPagination" style="display:none">
+  <button class="page-btn" id="prevBtn" onclick="changePage(-1)" disabled>← Prev</button>
+  <span class="page-info" id="pageInfo"></span>
+  <button class="page-btn" id="nextBtn" onclick="changePage(1)">Next →</button>
+</div>
+
+<script>
+  let currentPage = 1;
+  let totalResults = 0;
+  let selectedConcepts = new Set(['C524204448']);
+
+  // Set default dates: last 30 days
+  const today = new Date();
+  const ago30 = new Date(today); ago30.setDate(today.getDate() - 30);
+  document.getElementById('fromDate').value = ago30.toISOString().split('T')[0];
+  document.getElementById('toDate').value = today.toISOString().split('T')[0];
+
+  document.querySelectorAll('.concept-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      const id = tag.dataset.id;
+      if (selectedConcepts.has(id)) { selectedConcepts.delete(id); tag.classList.remove('active'); }
+      else { selectedConcepts.add(id); tag.classList.add('active'); }
+    });
+  });
+
+  function buildUrl(page) {
+    const from = document.getElementById('fromDate').value;
+    const to = document.getElementById('toDate').value;
+    const journal = document.getElementById('journalFilter').value;
+    const oa = document.getElementById('oaFilter').value;
+    const sort = document.getElementById('sortFilter').value;
+    const pp = document.getElementById('perPage').value;
+    const concepts = Array.from(selectedConcepts).join('|');
+
+    let filters = `concepts.id:${concepts}`;
+    if (from) filters += `,from_publication_date:${from}`;
+    if (to) filters += `,to_publication_date:${to}`;
+    if (journal) filters += `,primary_location.source.id:${journal}`;
+    if (oa) filters += `,is_oa:${oa}`;
+
+    return `https://api.openalex.org/works?filter=${filters}&sort=${sort}&per-page=${pp}&page=${page}&select=id,title,doi,publication_date,primary_location,cited_by_count,is_oa,authorships&mailto=jackwgoodall@github`;
+  }
+
+  function openInBrowser() { window.open(buildUrl(1), '_blank'); }
+  function changePage(dir) { currentPage += dir; doSearch(false); }
+
+  async function doSearch(reset = true) {
+    if (reset) currentPage = 1;
+    if (selectedConcepts.size === 0) { showError('Please select at least one topic.'); return; }
+
+    const btn = document.getElementById('searchBtn');
+    btn.disabled = true; btn.textContent = 'Searching…';
+    document.getElementById('oaError').style.display = 'none';
+    document.getElementById('oaStatus').textContent = 'Fetching from OpenAlex…';
+    document.getElementById('oaStatus').style.display = 'block';
+    document.getElementById('paperList').innerHTML = '';
+    document.getElementById('oaStats').style.display = 'none';
+    document.getElementById('oaPagination').style.display = 'none';
+
+    try {
+      const res = await fetch(buildUrl(currentPage));
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+
+      totalResults = data.meta?.count || 0;
+      const works = data.results || [];
+      const pp = parseInt(document.getElementById('perPage').value);
+
+      document.getElementById('statTotal').textContent = totalResults.toLocaleString();
+      document.getElementById('statOA').textContent = works.filter(w => w.is_oa).length + ' / ' + works.length;
+      document.getElementById('statPage').textContent = currentPage + ' / ' + Math.ceil(totalResults / pp);
+      document.getElementById('oaStats').style.display = 'grid';
+      document.getElementById('oaStatus').style.display = 'none';
+
+      if (works.length === 0) {
+        document.getElementById('oaStatus').textContent = 'No results — try widening your date range or selecting more topics.';
+        document.getElementById('oaStatus').style.display = 'block';
+      } else {
+        renderPapers(works);
+        const totalPages = Math.ceil(totalResults / pp);
+        if (totalPages > 1) {
+          document.getElementById('oaPagination').style.display = 'flex';
+          document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages}`;
+          document.getElementById('prevBtn').disabled = currentPage <= 1;
+          document.getElementById('nextBtn').disabled = currentPage >= totalPages;
+        }
+      }
+    } catch(e) {
+      showError('Could not fetch from OpenAlex: ' + e.message);
+    }
+    btn.disabled = false; btn.textContent = 'Search OpenAlex';
+  }
+
+  function showError(msg) {
+    document.getElementById('oaError').textContent = msg;
+    document.getElementById('oaError').style.display = 'block';
+    document.getElementById('oaStatus').style.display = 'none';
+  }
+
+  function renderPapers(works) {
+    document.getElementById('paperList').innerHTML = works.map(w => {
+      const doi = w.doi ? w.doi.replace('https://doi.org/', '') : null;
+      const doiUrl = doi ? `https://doi.org/${doi}` : null;
+      const journal = w.primary_location?.source?.display_name || '';
+      const year = w.publication_date?.slice(0, 4) || '';
+      const cited = w.cited_by_count ?? 0;
+      const authors = (w.authorships || []).slice(0, 3)
+        .map(a => a.author?.display_name?.split(' ').pop()).filter(Boolean).join(', ');
+      const more = (w.authorships?.length || 0) > 3 ? ` +${w.authorships.length - 3}` : '';
+      return `<div class="paper-card">
+        <div class="title">${doiUrl ? `<a href="${doiUrl}" target="_blank">${w.title || 'Untitled'}</a>` : (w.title || 'Untitled')}</div>
+        <div class="authors">${authors}${more}</div>
+        <div class="meta">
+          ${journal ? `<span class="badge badge-journal">${journal}</span>` : ''}
+          ${year ? `<span class="badge badge-year">${year}</span>` : ''}
+          ${w.is_oa ? `<span class="badge badge-oa">Open access</span>` : ''}
+          ${cited > 0 ? `<span class="badge badge-cite">${cited} citations</span>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  // Auto-search on load
+  doSearch();
+</script>
+```

@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Jack Goodall"
+  description: "Infectious disease researcher — notes, papers, and tools"
+  site-url: https://jackwgoodall.github.io
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: blog.qmd
+        text: Blog
+      - href: papers.qmd
+        text: Latest Papers
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/jackwgoodall
+  page-footer:
+    center: "Jack Goodall · Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 2

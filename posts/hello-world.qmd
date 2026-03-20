@@ -1,0 +1,20 @@
+---
+title: "Hello world — first post"
+description: "Getting this site up and running, and what I plan to write about."
+date: 2026-03-20
+categories: [meta, infectious disease]
+---
+
+This is the first post on this site. I'll use this space to write up notes on:
+
+- Papers I find interesting from the ID literature
+- Methodological notes on R tools I use
+- Occasional longer pieces on epidemiology and AMR
+
+## Why a blog?
+
+Writing things down is how I process ideas. If it's useful to anyone else, great.
+
+## What to expect
+
+Posts will vary in length and depth — some will be brief notes, some longer pieces. I'll tag everything with categories so it's easy to filter.

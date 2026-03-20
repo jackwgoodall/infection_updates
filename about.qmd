@@ -1,0 +1,18 @@
+---
+title: "About"
+toc: false
+---
+
+I'm an infectious disease researcher with interests in epidemiology, antimicrobial resistance, and the tools we use to understand pathogen spread.
+
+This site is a working notebook — posts range from brief notes on interesting papers to longer methodological pieces.
+
+## Contact
+
+- GitHub: [jackwgoodall](https://github.com/jackwgoodall)
+
+## Built with
+
+- [Quarto](https://quarto.org) — open source scientific publishing
+- [OpenAlex](https://openalex.org) — open scholarly metadata
+- [GitHub Pages](https://pages.github.com) — free hosting

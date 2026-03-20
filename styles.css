@@ -1,0 +1,15 @@
+/* Typography refinements */
+body { font-size: 16px; }
+.navbar-brand { font-weight: 600; }
+
+/* Blog post listing */
+.quarto-post .metadata { font-size: 13px; }
+
+/* Wider content area for the papers page */
+.page-layout-full .page-columns { max-width: 960px; margin: 0 auto; }
+
+/* Code blocks */
+pre { border-radius: 6px; }
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }

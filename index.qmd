@@ -1,0 +1,28 @@
+---
+title: "Jack Goodall"
+subtitle: "Infectious Disease Researcher"
+page-layout: full
+toc: false
+---
+
+Hi, I'm Jack — an infectious disease researcher. This site is where I share notes on papers I find interesting, tools I've built, and occasional longer pieces on topics in ID epidemiology and AMR.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### Latest posts
+
+See the [Blog](blog.qmd) for all posts.
+
+<!-- Recent posts will appear here automatically once you have posts in the posts/ folder -->
+
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### What's publishing now
+
+The [Latest Papers](papers.qmd) page pulls live from OpenAlex — recent publications across infectious disease, AMR, epidemiology, and virology.
+
+:::
+
+:::
