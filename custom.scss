@@ -1,0 +1,62 @@
+/*-- scss:defaults --*/
+
+/* Colours */
+$body-bg:           #FAF6E6;
+$navbar-bg:         #5a6472;
+$navbar-fg:         #fff;
+$navbar-hl:         #fff;
+$link-color:        #5a6472;
+$body-color:        #3a3028;
+$headings-color:    #3a3028;
+
+/* Typography */
+$font-family-sans-serif: "Crimson Pro", "Georgia", serif;
+$headings-font-family:   "Crimson Pro", "Georgia", serif;
+$font-size-base:         1.05rem;
+$headings-font-weight:   600;
+$line-height-base:       1.75;
+
+/* Cards / borders */
+$card-bg:           #f5f0dc;
+$border-color:      #d4cdb0;
+$border-radius:     4px;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+
+body { background-color: #FAF6E6; }
+
+.navbar {
+  background-color: #5a6472 !important;
+  border-bottom: none;
+}
+.navbar-brand, .nav-link { color: #fff !important; }
+.nav-link:hover, .nav-link:focus { color: rgba(255,255,255,0.75) !important; }
+
+.nav-footer {
+  background-color: #ede8d0;
+  border-top: 1px solid #d4cdb0;
+  color: #7a6a58;
+  font-size: 0.875rem;
+}
+
+.quarto-category {
+  background-color: #ede8d0 !important;
+  color: #5a6472 !important;
+  border-color: #c9c0a0 !important;
+}
+
+pre {
+  background-color: #ede8d0;
+  border: 1px solid #d4cdb0;
+  border-radius: 4px;
+}
+
+blockquote {
+  border-left: 3px solid #5a6472;
+  color: #6a5a4a;
+}
+
+#TOC a { color: #5a6472; }
+html { scroll-behavior: smooth; }

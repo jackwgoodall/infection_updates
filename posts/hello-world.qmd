@@ -1,20 +1,17 @@
 ---
-title: "Hello world — first post"
+title: "What are we doing here?"
 description: "Getting this site up and running, and what I plan to write about."
+author: "[Jack Goodall](mailto:jack.goodall@lshtm.ac.uk)"
 date: 2026-03-20
 categories: [meta, infectious disease]
 ---
 
-This is the first post on this site. I'll use this space to write up notes on:
+My plan is use this space to write:
 
-- Papers I find interesting from the ID literature
-- Methodological notes on R tools I use
-- Occasional longer pieces on epidemiology and AMR
+- Short summaries and reviews of topical infection papers I find interesting, and I think might be clinically relevant
+- Maybe occasional longer pieces on epidemiology and disease dynamics
 
-## Why a blog?
+If anyone reading this would like to join me in writing, that would be amazing. 
+You can either email me the summary and I'll publish it or there are some instructions on how you can do it directly with Quarto in the [README](https://github.com/jackwgoodall/jackwgoodall.github.io/blob/781ba5f8b4cbd64f270e14c9da8beb4fa16458f8/README.md)
 
-Writing things down is how I process ideas. If it's useful to anyone else, great.
 
-## What to expect
-
-Posts will vary in length and depth — some will be brief notes, some longer pieces. I'll tag everything with categories so it's easy to filter.

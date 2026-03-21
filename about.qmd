@@ -3,16 +3,15 @@ title: "About"
 toc: false
 ---
 
-I'm an infectious disease researcher with interests in epidemiology, antimicrobial resistance, and the tools we use to understand pathogen spread.
-
-This site is a working notebook — posts range from brief notes on interesting papers to longer methodological pieces.
+I'm a UK infectious disease registrar and researcher with interests in pathogen dynamics.  I made this site mainly to force me to keep up with the medical literature (and to remember so clinical medicine whilst I'm out of programme doing reasearch).
 
 ## Contact
 
 - GitHub: [jackwgoodall](https://github.com/jackwgoodall)
+- Email: [j.goodall@sheffield.ac.uk or jack.goodall@lshtm.ac.uk](mailto:jack.goodall@lshtm.ac.uk;j.goodall@sheffield.ac.uk)
 
 ## Built with
 
-- [Quarto](https://quarto.org) — open source scientific publishing
-- [OpenAlex](https://openalex.org) — open scholarly metadata
-- [GitHub Pages](https://pages.github.com) — free hosting
+- [Quarto](https://quarto.org) 
+- [OpenAlex](https://openalex.org) — open access collection of published works
+- [GitHub Pages](https://pages.github.com) — hosting

@@ -1,15 +1,20 @@
-/* Typography refinements */
-body { font-size: 16px; }
-.navbar-brand { font-weight: 600; }
+/* Sandstone refinements */
+
+/* Slightly tighten navbar */
+.navbar { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
 /* Blog post listing */
 .quarto-post .metadata { font-size: 13px; }
 
-/* Wider content area for the papers page */
-.page-layout-full .page-columns { max-width: 960px; margin: 0 auto; }
-
-/* Code blocks */
-pre { border-radius: 6px; }
-
 /* Smooth scrolling */
 html { scroll-behavior: smooth; }
+
+/* Code blocks */
+pre { border-radius: 4px; }
+
+/* Make category badges match Sandstone's warm palette */
+.quarto-category { 
+  background-color: #f0ece6 !important; 
+  color: #325D88 !important;
+  border-color: #ddd6cc !important;
+}
