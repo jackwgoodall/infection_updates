@@ -1,11 +1,12 @@
 project:
   type: website
   output-dir: docs
+  resources: "/*"
 
 website:
   title: "Jack Goodall"
   description: "Infectious disease researcher — notes, papers, and tools"
-  site-url: https://jackwgoodall.github.io
+  site-url: site-url: https://https://jackwgoodall.github.io/infection_updates/
   navbar:
     left:
       - href: index.qmd
@@ -24,9 +25,8 @@ website:
 
 format:
   html:
-    theme:
-      light: [sandstone, custom.scss]
-      dark: darkly
+    theme: [sandstone, custom.scss]
     css: styles.css
     toc: true
     toc-depth: 2
+    base-url: ""
