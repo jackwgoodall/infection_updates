@@ -2,16 +2,20 @@
 title: "What are we doing here?"
 description: "Getting this site up and running, and what I plan to write about."
 author: "[Jack Goodall](mailto:jack.goodall@lshtm.ac.uk)"
-date: 2026-03-20
-categories: [meta, infectious disease]
+date: 20-03-2026
+categories: [intro]
 ---
+
+This is the start of a blog and website that I have made, mostly with the aim of staying up to date with clinical research whilst I am away doing a (quite niche) PhD.  If anyone else finds it useful along the way, so much the better.
+
+You will see under the [Latest Papers](papers.qmd) tab above there is a rolling feed of papers from some of the high impact journals. 
 
 My plan is use this space to write:
 
-- Short summaries and reviews of topical infection papers I find interesting, and I think might be clinically relevant
+- Short summaries and reviews of recently published infection papers I find interesting, and I think might be clinically useful
 - Maybe occasional longer pieces on epidemiology and disease dynamics
 
-If anyone reading this would like to join me in writing, that would be amazing. 
-You can either email me the summary and I'll publish it or there are some instructions on how you can do it directly with Quarto in the [README](https://github.com/jackwgoodall/jackwgoodall.github.io/blob/781ba5f8b4cbd64f270e14c9da8beb4fa16458f8/README.md)
+If anyone reading this would like to join me in writing these synopses/reviews, that would be amazing. 
+You can either email me the summary and I'll publish it or there are some instructions on how you can do it directly with Quarto and git in the [README](https://github.com/jackwgoodall/jackwgoodall.github.io/blob/781ba5f8b4cbd64f270e14c9da8beb4fa16458f8/README.md). 
 
 
