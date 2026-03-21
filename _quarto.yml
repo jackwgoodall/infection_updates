@@ -6,7 +6,7 @@ project:
 website:
   title: "Jack Goodall"
   description: "Infectious disease researcher — notes, papers, and tools"
-  site-url: site-url: https://https://jackwgoodall.github.io/infection_updates/
+  site-url: https://https://jackwgoodall.github.io/infection_updates/
   navbar:
     left:
       - href: index.qmd
