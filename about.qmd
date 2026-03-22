@@ -3,14 +3,17 @@ title: "About"
 toc: false
 ---
 
-I'm a UK infectious disease registrar and researcher with interests in pathogen dynamics.  I made this site mainly to force me to keep up with the medical literature and to try and remember some clinical medicine whilst I'm out of programme doing research.
+## Jack Goodall 
+I'm a UK infectious disease registrar and researcher with interests in pathogen dynamics.  I made this site mainly to force me to keep up with the medical literature and to try and remember some clinical medicine whilst I'm away from clinical practice doing quite a [niche PhD](https://www.create-phd.org/fellows).
 
-## Contact
+AS an aside I've written a guide to using markdown for researchers.  Markdown is a great way to communicate early findings with colleagues and collaborators by embedding results and figures with structured text. You can find it [here](https://jackwgoodall.github.io/floreytemplate).
+
+### Contact
 
 - GitHub: [jackwgoodall](https://github.com/jackwgoodall)
 - Email: [j.goodall@sheffield.ac.uk](mailto:j.goodall@sheffield.ac.uk) or [jack.goodall@lshtm.ac.uk](mailto:jack.goodall@lshtm.ac.uk)
 
-## Built with
+## Website built with
 
 - [Quarto](https://quarto.org) 
 - [OpenAlex](https://openalex.org) — open access collection of published works

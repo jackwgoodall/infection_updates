@@ -1,7 +1,7 @@
 ---
 title: "What are we doing here?"
 description: "Getting this site up and running, and what I plan to write about."
-author: "[Jack Goodall](mailto:jack.goodall@lshtm.ac.uk)"
+author: "[Jack Goodall](/about.qmd#jack-goodall)"
 date: 20-03-2026
 categories: [intro]
 ---
