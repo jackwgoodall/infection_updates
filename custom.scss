@@ -60,3 +60,130 @@ blockquote {
 
 #TOC a { color: #5a6472; }
 html { scroll-behavior: smooth; }
+
+/* ── Papers page ── */
+/* These live here so they compile after Bootstrap and win specificity */
+
+.section-label { font-size: 11px; color: #7a6a58; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+hr.oa-divider { border: none; border-top: 1px solid #c9c0a0; margin: 1rem 0; }
+.team-label { font-size: 11px; color: #7a6a58; text-transform: uppercase; letter-spacing: 0.05em; margin: 6px 0 2px; }
+.team-note { font-size: 10px; color: #9aa0a8; text-transform: none; letter-spacing: 0; font-weight: 400; }
+
+.concept-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.75rem 0 1.25rem; }
+.concept-tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background-color: #FAF6E6;
+  color: #3a3028;
+  cursor: pointer;
+  border: 1.5px solid #9aa0a8;
+  transition: all 0.15s;
+  line-height: 1.5;
+  font-family: inherit;
+  font-weight: 400;
+}
+.concept-tag:hover {
+  border-color: #5a6472;
+  color: #5a6472;
+  background-color: #FAF6E6;
+  text-decoration: none;
+}
+.concept-tag.active {
+  background-color: #5a6472;
+  color: #fff;
+  border-color: #5a6472;
+}
+.concept-tag[data-team="B"] { border-style: dashed; }
+
+.oa-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 1.5rem 0 1rem;
+}
+.oa-filter-group { display: flex; flex-direction: column; gap: 4px; }
+.oa-filter-group label { font-size: 12px; color: #7a6a58; font-weight: 500; }
+.oa-filter-group select,
+.oa-filter-group input[type="date"] {
+  padding: 6px 10px;
+  border: 1.5px solid #c9c0a0;
+  border-radius: 4px;
+  font-size: 13px;
+  background-color: #FAF6E6;
+  color: #3a3028;
+  box-shadow: none;
+  font-family: inherit;
+  width: 100%;
+}
+.oa-filter-group select:focus,
+.oa-filter-group input[type="date"]:focus {
+  outline: none;
+  border-color: #5a6472;
+  box-shadow: none;
+}
+
+.oa-actions { display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center; }
+
+.btn-search, .page-btn {
+  display: inline-block;
+  background-color: #FAF6E6;
+  color: #3a3028;
+  border: 1.5px solid #9aa0a8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+  font-weight: 400;
+  box-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.btn-search { padding: 8px 22px; font-size: 14px; }
+.page-btn   { padding: 6px 16px;  font-size: 13px; }
+.btn-search:hover, .page-btn:hover {
+  background-color: #ede8d0;
+  border-color: #5a6472;
+  color: #5a6472;
+  box-shadow: none;
+}
+.btn-search:disabled, .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-search:focus, .page-btn:focus { box-shadow: none; outline: none; }
+
+.oa-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+.stat-box {
+  background-color: #ede8d0;
+  border: 1px solid #c9c0a0;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+}
+.stat-box .label { font-size: 11px; color: #7a6a58; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
+.stat-box .value { font-size: 22px; font-weight: 600; color: #3a3028; }
+
+.paper-list { display: flex; flex-direction: column; gap: 10px; }
+.paper-card {
+  background-color: #fffdf5;
+  border: 1px solid #c9c0a0;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  transition: border-color 0.15s;
+}
+.paper-card:hover { border-color: #5a6472; }
+.paper-card .title { font-size: 15px; font-weight: 600; color: #3a3028; margin-bottom: 5px; line-height: 1.45; }
+.paper-card .title a { color: #5a6472; text-decoration: none; }
+.paper-card .title a:hover { text-decoration: underline; }
+.paper-card .authors { font-size: 12px; color: #7a6a58; margin-bottom: 8px; }
+.paper-card .meta { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.badge { font-size: 11px; padding: 2px 9px; border-radius: 3px; }
+.badge-journal { background-color: #ede8d0; color: #5a6472; border: 1px solid #c9c0a0; }
+.badge-oa      { background-color: #e8f5d8; color: #4a7c20; }
+.badge-year    { background-color: #ede8d0; color: #7a6a58; }
+.badge-cite    { background-color: #ede8d0; color: #7a6a58; }
+
+.oa-status { text-align: center; padding: 2rem 0; color: #7a6a58; font-size: 14px; }
+.oa-error { padding: 1rem; background-color: #fef2f2; border: 1px solid #fca5a5; border-radius: 4px; color: #b91c1c; font-size: 13px; margin-bottom: 1rem; }
+
+.pagination { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 1.5rem; }
+.page-info { font-size: 13px; color: #7a6a58; }

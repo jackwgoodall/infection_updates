@@ -8,68 +8,6 @@ page-layout: full
 Results pulled live from [OpenAlex](https://openalex.org) each time you load this page. Use the filters to narrow by topic, journal, or date.
 
 ```{=html}
-<style>
-  .oa-filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 1.5rem 0 1rem; }
-  .oa-filter-group { display: flex; flex-direction: column; gap: 4px; }
-  .oa-filter-group label { font-size: 12px; color: #7a6a58; font-weight: 500; }
-  .oa-filter-group select, .oa-filter-group input { padding: 6px 10px; border: 1.5px solid #c9c0a0 !important; border-radius: 4px; font-size: 13px; background: #FAF6E6 !important; color: #3a3028 !important; }
-  .oa-filter-group select:focus, .oa-filter-group input:focus { outline: none; border-color: #5a6472 !important; }
-  .concept-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.75rem 0 1.25rem; }
-  .concept-tag { font-size: 12px; padding: 3px 10px; border-radius: 4px; background: #FAF6E6 !important; color: #3a3028 !important; cursor: pointer; border: 1.5px solid #9aa0a8 !important; transition: all 0.15s; }
-  .concept-tag:hover { border-color: #5a6472 !important; color: #5a6472 !important; }
-  .concept-tag.active { background: #5a6472 !important; color: white !important; border-color: #5a6472 !important; }
-  .concept-tag[data-team="B"] { border-style: dashed !important; }
-  .team-label { font-size: 11px; color: #7a6a58; text-transform: uppercase; letter-spacing: 0.05em; margin: 6px 0 2px; }
-  .team-note { font-size: 10px; color: #9aa0a8; text-transform: none; letter-spacing: 0; }
-  .oa-actions { display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center; }
-  .btn-search { background: #FAF6E6 !important; color: #3a3028 !important; border: 1.5px solid #9aa0a8 !important; padding: 8px 22px; border-radius: 4px; font-size: 14px; cursor: pointer; transition: all 0.15s; }
-  .btn-search:hover { background: #ede8d0 !important; border-color: #5a6472 !important; color: #5a6472 !important; }
-  .btn-search:disabled { opacity: 0.4; cursor: not-allowed; }
-  .oa-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.5rem; }
-  .stat-box { background: #ede8d0 !important; border-radius: 4px; padding: 0.75rem 1rem; border: 1px solid #c9c0a0 !important; }
-  .stat-box .label { font-size: 11px; color: #7a6a58 !important; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
-  .stat-box .value { font-size: 22px; font-weight: 600; color: #3a3028 !important; }
-  .paper-list { display: flex; flex-direction: column; gap: 10px; }
-  .paper-card { background: #fffdf5 !important; border: 1px solid #c9c0a0 !important; border-radius: 4px; padding: 1rem 1.25rem; transition: border-color 0.15s; }
-  .paper-card:hover { border-color: #5a6472 !important; }
-  .paper-card .title { font-size: 15px; font-weight: 600; color: #3a3028 !important; margin-bottom: 5px; line-height: 1.45; }
-  .paper-card .title a { color: #5a6472 !important; text-decoration: none; }
-  .paper-card .title a:hover { text-decoration: underline; }
-  .paper-card .authors { font-size: 12px; color: #7a6a58 !important; margin-bottom: 8px; }
-  .paper-card .meta { display: flex; flex-wrap: wrap; gap: 6px; }
-  .badge { font-size: 11px; padding: 2px 9px; border-radius: 3px; }
-  .badge-journal { background: #ede8d0 !important; color: #5a6472 !important; border: 1px solid #c9c0a0 !important; }
-  .badge-oa { background: #e8f5d8 !important; color: #4a7c20 !important; }
-  .badge-year { background: #ede8d0 !important; color: #7a6a58 !important; }
-  .badge-cite { background: #ede8d0 !important; color: #7a6a58 !important; }
-  .oa-status { text-align: center; padding: 2rem 0; color: #7a6a58 !important; font-size: 14px; }
-  .oa-error { padding: 1rem; background: #fef2f2 !important; border: 1px solid #fca5a5 !important; border-radius: 4px; color: #b91c1c !important; font-size: 13px; margin-bottom: 1rem; }
-  .pagination { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 1.5rem; }
-  .page-btn { background: #FAF6E6 !important; border: 1.5px solid #9aa0a8 !important; border-radius: 4px; padding: 6px 16px; font-size: 13px; cursor: pointer; color: #3a3028 !important; transition: all 0.15s; }
-  .page-btn:hover { background: #ede8d0 !important; border-color: #5a6472 !important; color: #5a6472 !important; }
-  .page-btn:disabled { opacity: 0.3; cursor: not-allowed; }
-  .page-info { font-size: 13px; color: #7a6a58 !important; }
-  .section-label { font-size: 11px; color: #7a6a58 !important; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-  hr.oa-divider { border: none; border-top: 1px solid #c9c0a0 !important; margin: 1rem 0; }
-  @media (prefers-color-scheme: dark) {
-    .oa-filter-group select, .oa-filter-group input { background: #2a2a2a !important; border-color: #555 !important; color: #ddd !important; }
-    .concept-tag { background: #2a2a2a !important; color: #ccc !important; border-color: #555 !important; }
-    .concept-tag.active { background: #5a6472 !important; border-color: #5a6472 !important; color: white !important; }
-    .btn-search { background: #2a2a2a !important; color: #ddd !important; border-color: #888 !important; }
-    .stat-box { background: #1e1e1e !important; border-color: #444 !important; }
-    .stat-box .value { color: #e0ddd0 !important; }
-    .paper-card { background: #1e1e1e !important; border-color: #444 !important; }
-    .paper-card .title { color: #e0ddd0 !important; }
-    .paper-card .title a { color: #9ab0c0 !important; }
-    .paper-card .authors { color: #aaa !important; }
-    .badge-journal { background: #252a30 !important; color: #9ab0c0 !important; border-color: #555 !important; }
-    .badge-year, .badge-cite { background: #2a2a2a !important; color: #aaa !important; }
-    .page-btn { background: #2a2a2a !important; border-color: #888 !important; color: #ddd !important; }
-    .oa-status { color: #aaa !important; }
-    .section-label, .team-label { color: #aaa !important; }
-  }
-</style>
-
 <div class="section-label">Filter by topic (optional)</div>
 <div class="concept-tags" id="conceptTags">
   <span class="concept-tag" data-id="C524204448">Infectious disease</span>
@@ -92,43 +30,36 @@ Results pulled live from [OpenAlex](https://openalex.org) each time you load thi
     <label>To date</label>
     <input type="date" id="toDate">
   </div>
+
   <div class="oa-filter-group" style="grid-column: 1 / -1;">
     <label>Journals</label>
-    <div class="team-label">A team <span class="team-note">— all papers</span></div>
-    <div class="concept-tags" id="aJournalTags" style="margin: 4px 0 0;">
-      <!-- ═══ PASTE A-TEAM JOURNAL TAGS HERE (section 1 from generate_journals.R) ═══ -->
-         <span class="concept-tag active" data-id="https://openalex.org/S23772524" data-team="A">The Lancet Infectious Diseases</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S2531945440" data-team="A">The Lancet HIV</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S19579164" data-team="A">Journal of Infection</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S87161179" data-team="A">Journal of Hospital Infection</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S71414007" data-team="A">Clinical Microbiology and Infection</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S2735126445" data-team="A">Open Forum Infectious Diseases</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S72350973" data-team="A">Clinical Infectious Diseases</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S87161179" data-team="A">Journal of Hospital Infection</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S46544255" data-team="A">PLoS neglected tropical diseases</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S53087977" data-team="A">Journal of Clinical Microbiology</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S189281586" data-team="A">Emerging infectious diseases</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S54542293" data-team="A">The Journal of Infectious Diseases</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S171015910" data-team="A">BMC Infectious Diseases</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S2764760790" data-team="A">Emerging Microbes & Infections</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S2004986" data-team="A">PLoS Pathogens</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S2764926557" data-team="A">Nature Microbiology</span> 
+    <div class="team-label">Infection Journals <span class="team-note">— all papers</span></div>
+    <div class="concept-tags" id="aJournalTags" style="margin: 4px 0 8px;">
+      <span class="concept-tag active" data-id="S23772524" data-team="A">The Lancet Infectious Diseases</span>
+      <span class="concept-tag active" data-id="S2531945440" data-team="A">The Lancet HIV</span>
+      <span class="concept-tag active" data-id="S19579164" data-team="A">Journal of Infection</span>
+      <span class="concept-tag active" data-id="S87161179" data-team="A">Journal of Hospital Infection</span>
+      <span class="concept-tag active" data-id="S71414007" data-team="A">Clinical Microbiology and Infection</span>
+      <span class="concept-tag active" data-id="S2735126445" data-team="A">Open Forum Infectious Diseases</span>
+      <span class="concept-tag active" data-id="S72350973" data-team="A">Clinical Infectious Diseases</span>
+      <span class="concept-tag active" data-id="S46544255" data-team="A">PLoS Neglected Tropical Diseases</span>
+      <span class="concept-tag active" data-id="S53087977" data-team="A">Journal of Clinical Microbiology</span>
+      <span class="concept-tag active" data-id="S189281586" data-team="A">Emerging Infectious Diseases</span>
+      <span class="concept-tag active" data-id="S54542293" data-team="A">The Journal of Infectious Diseases</span>
+      <span class="concept-tag active" data-id="S171015910" data-team="A">BMC Infectious Diseases</span>
+      <span class="concept-tag active" data-id="S2764760790" data-team="A">Emerging Microbes &amp; Infections</span>
+      <span class="concept-tag active" data-id="S2004986" data-team="A">PLoS Pathogens</span>
+      <span class="concept-tag active" data-id="S2764926557" data-team="A">Nature Microbiology</span>
     </div>
-
-    <!-- ═══ B-TEAM SECTION — remove this block entirely if no B-team journals ═══-->
-    <div style="margin-top:12px;">
-      <div class="team-label">B team <span class="team-note">— infectious diseases / microbiology / virology papers only</span></div>
-      <div class="concept-tags" id="bJournalTags" style="margin:4px 0 0;">
-     <!--   PASTE B-TEAM JOURNAL TAGS HERE (section 2 from generate_journals.R) -->
-      </div>
-    <span class="concept-tag active" data-id="https://openalex.org/S49861241" data-team="B">The Lancet</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S4393917726" data-team="B">BMJ</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S125754415" data-team="B">Proceedings of the National Academy of Sciences</span>
-    <span class="concept-tag active" data-id="https://openalex.org/S172573765" data-team="B">JAMA</span> 
+    <div class="team-label">Generalist Journals <span class="team-note">— infectious diseases / microbiology / virology papers only</span></div>
+    <div class="concept-tags" id="bJournalTags" style="margin: 4px 0 0;">
+      <span class="concept-tag active" data-id="S49861241" data-team="B">The Lancet</span>
+      <span class="concept-tag active" data-id="S4393917726" data-team="B">BMJ</span>
+      <span class="concept-tag active" data-id="S125754415" data-team="B">PNAS</span>
+      <span class="concept-tag active" data-id="S172573765" data-team="B">JAMA</span>
     </div>
-    
-
   </div>
+
   <div class="oa-filter-group">
     <label>Access</label>
     <select id="oaFilter">
@@ -158,20 +89,20 @@ Results pulled live from [OpenAlex](https://openalex.org) each time you load thi
 </div>
 
 <div id="oaError" class="oa-error" style="display:none"></div>
-<div id="oaStatus" class="oa-status">Loading latest papers&#x2026;</div>
+<div id="oaStatus" class="oa-status">Loading latest papers&hellip;</div>
 
 <div class="oa-stats" id="oaStats" style="display:none">
-  <div class="stat-box"><div class="label">Total results</div><div class="value" id="statTotal">&#x2014;</div></div>
-  <div class="stat-box"><div class="label">Open access on this page</div><div class="value" id="statOA">&#x2014;</div></div>
-  <div class="stat-box"><div class="label">Page</div><div class="value" id="statPage">&#x2014;</div></div>
+  <div class="stat-box"><div class="label">Total results</div><div class="value" id="statTotal">&mdash;</div></div>
+  <div class="stat-box"><div class="label">Open access on this page</div><div class="value" id="statOA">&mdash;</div></div>
+  <div class="stat-box"><div class="label">Page</div><div class="value" id="statPage">&mdash;</div></div>
 </div>
 
 <div class="paper-list" id="paperList"></div>
 
 <div class="pagination" id="oaPagination" style="display:none">
-  <button class="page-btn" id="prevBtn" onclick="changePage(-1)" disabled>&#x2190; Prev</button>
+  <button class="page-btn" id="prevBtn" onclick="changePage(-1)" disabled>&larr; Prev</button>
   <span class="page-info" id="pageInfo"></span>
-  <button class="page-btn" id="nextBtn" onclick="changePage(1)">Next &#x2192;</button>
+  <button class="page-btn" id="nextBtn" onclick="changePage(1)">Next &rarr;</button>
 </div>
 
 <script>
@@ -179,61 +110,65 @@ Results pulled live from [OpenAlex](https://openalex.org) each time you load thi
   let totalResults = 0;
   let selectedConcepts = new Set();
 
-  // ═══ PASTE JS SET LINES HERE (section 3 from generate_journals.R) ═══
-  let selectedAJournals = new Set([]);
-  let selectedBJournals = new Set([]);
-  // ════════════════════════════════════════════════════════════════════
+  // Initialise sets directly from rendered tags
+  const selectedAJournals = new Set(
+    Array.from(document.querySelectorAll('#aJournalTags .concept-tag')).map(t => t.dataset.id)
+  );
+  const selectedBJournals = new Set(
+    Array.from(document.querySelectorAll('#bJournalTags .concept-tag')).map(t => t.dataset.id)
+  );
 
-  const B_SUBFIELDS = "topics.subfield.display_name:Infectious Diseases|Microbiology|Virology";
+  // B-team filter: only show ID / microbiology / virology subfields
+  const B_SUBFIELDS = 'topics.subfield.id:2725|2404|2726';
 
   const today = new Date();
   const ago1m = new Date(today); ago1m.setMonth(today.getMonth() - 1);
-  document.getElementById("fromDate").value = ago1m.toISOString().split("T")[0];
-  document.getElementById("toDate").value = today.toISOString().split("T")[0];
+  document.getElementById('fromDate').value = ago1m.toISOString().split('T')[0];
+  document.getElementById('toDate').value = today.toISOString().split('T')[0];
 
-  document.querySelectorAll("#conceptTags .concept-tag").forEach(tag => {
-    tag.addEventListener("click", () => {
+  document.querySelectorAll('#conceptTags .concept-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
       const id = tag.dataset.id;
-      if (selectedConcepts.has(id)) { selectedConcepts.delete(id); tag.classList.remove("active"); }
-      else { selectedConcepts.add(id); tag.classList.add("active"); }
+      if (selectedConcepts.has(id)) { selectedConcepts.delete(id); tag.classList.remove('active'); }
+      else { selectedConcepts.add(id); tag.classList.add('active'); }
     });
   });
 
-  document.querySelectorAll("#aJournalTags .concept-tag").forEach(tag => {
-    tag.addEventListener("click", () => {
+  document.querySelectorAll('#aJournalTags .concept-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
       const id = tag.dataset.id;
-      if (selectedAJournals.has(id)) { selectedAJournals.delete(id); tag.classList.remove("active"); }
-      else { selectedAJournals.add(id); tag.classList.add("active"); }
+      if (selectedAJournals.has(id)) { selectedAJournals.delete(id); tag.classList.remove('active'); }
+      else { selectedAJournals.add(id); tag.classList.add('active'); }
     });
   });
 
-  document.querySelectorAll("#bJournalTags .concept-tag").forEach(tag => {
-    tag.addEventListener("click", () => {
+  document.querySelectorAll('#bJournalTags .concept-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
       const id = tag.dataset.id;
-      if (selectedBJournals.has(id)) { selectedBJournals.delete(id); tag.classList.remove("active"); }
-      else { selectedBJournals.add(id); tag.classList.add("active"); }
+      if (selectedBJournals.has(id)) { selectedBJournals.delete(id); tag.classList.remove('active'); }
+      else { selectedBJournals.add(id); tag.classList.add('active'); }
     });
   });
 
   function buildCommonFilters(journalIds) {
-    const from = document.getElementById("fromDate").value;
-    const to   = document.getElementById("toDate").value;
-    const oa   = document.getElementById("oaFilter").value;
-    let f = "primary_location.source.id:" + Array.from(journalIds).join("|");
-    if (selectedConcepts.size > 0) f += ",concepts.id:" + Array.from(selectedConcepts).join("|");
-    if (from) f += ",from_publication_date:" + from;
-    if (to)   f += ",to_publication_date:" + to;
-    if (oa)   f += ",is_oa:" + oa;
+    const from = document.getElementById('fromDate').value;
+    const to   = document.getElementById('toDate').value;
+    const oa   = document.getElementById('oaFilter').value;
+    let f = 'primary_location.source.id:' + Array.from(journalIds).join('|');
+    if (selectedConcepts.size > 0) f += ',concepts.id:' + Array.from(selectedConcepts).join('|');
+    if (from) f += ',from_publication_date:' + from;
+    if (to)   f += ',to_publication_date:' + to;
+    if (oa)   f += ',is_oa:' + oa;
     return f;
   }
 
   function buildBaseUrl(filters, page) {
-    const sort = document.getElementById("sortFilter").value;
-    const pp   = document.getElementById("perPage").value;
-    return "https://api.openalex.org/works?filter=" + filters +
-      "&sort=" + sort + "&per-page=" + pp + "&page=" + page +
-      "&select=id,title,doi,publication_date,primary_location,cited_by_count,open_access,authorships" +
-      "&mailto=jackwgoodall@github";
+    const sort = document.getElementById('sortFilter').value;
+    const pp   = document.getElementById('perPage').value;
+    return 'https://api.openalex.org/works?filter=' + filters +
+      '&sort=' + sort + '&per-page=' + pp + '&page=' + page +
+      '&select=id,title,doi,publication_date,primary_location,cited_by_count,open_access,authorships' +
+      '&mailto=jackwgoodall@github';
   }
 
   function changePage(dir) { currentPage += dir; doSearch(false); }
@@ -241,25 +176,25 @@ Results pulled live from [OpenAlex](https://openalex.org) each time you load thi
   async function doSearch(reset = true) {
     if (reset) currentPage = 1;
     if (selectedAJournals.size === 0 && selectedBJournals.size === 0 && selectedConcepts.size === 0) {
-      showError("Please select at least one journal or topic."); return;
+      showError('Please select at least one journal or topic.'); return;
     }
-    const btn = document.getElementById("searchBtn");
-    btn.disabled = true; btn.textContent = "Searching...";
-    document.getElementById("oaError").style.display = "none";
-    document.getElementById("oaStatus").textContent = "Fetching from OpenAlex...";
-    document.getElementById("oaStatus").style.display = "block";
-    document.getElementById("paperList").innerHTML = "";
-    document.getElementById("oaStats").style.display = "none";
-    document.getElementById("oaPagination").style.display = "none";
+    const btn = document.getElementById('searchBtn');
+    btn.disabled = true; btn.textContent = 'Searching\u2026';
+    document.getElementById('oaError').style.display = 'none';
+    document.getElementById('oaStatus').textContent = 'Fetching from OpenAlex\u2026';
+    document.getElementById('oaStatus').style.display = 'block';
+    document.getElementById('paperList').innerHTML = '';
+    document.getElementById('oaStats').style.display = 'none';
+    document.getElementById('oaPagination').style.display = 'none';
     try {
       const fetches = [];
       if (selectedAJournals.size > 0) fetches.push(
         fetch(buildBaseUrl(buildCommonFilters(selectedAJournals), currentPage))
-          .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+          .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       );
       if (selectedBJournals.size > 0) fetches.push(
-        fetch(buildBaseUrl(buildCommonFilters(selectedBJournals) + "," + B_SUBFIELDS, currentPage))
-          .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+        fetch(buildBaseUrl(buildCommonFilters(selectedBJournals) + ',' + B_SUBFIELDS, currentPage))
+          .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       );
       const results = await Promise.all(fetches);
       let allWorks = [];
@@ -270,64 +205,64 @@ Results pulled live from [OpenAlex](https://openalex.org) each time you load thi
       });
       const seen = new Set();
       allWorks = allWorks.filter(w => { if (seen.has(w.id)) return false; seen.add(w.id); return true; });
-      const sort = document.getElementById("sortFilter").value;
-      if (sort === "publication_date:desc") {
+      const sort = document.getElementById('sortFilter').value;
+      if (sort === 'publication_date:desc') {
         allWorks.sort((a, b) => new Date(b.publication_date || 0) - new Date(a.publication_date || 0));
-      } else if (sort === "cited_by_count:desc") {
+      } else if (sort === 'cited_by_count:desc') {
         allWorks.sort((a, b) => (b.cited_by_count || 0) - (a.cited_by_count || 0));
       }
-      const pp = parseInt(document.getElementById("perPage").value);
-      document.getElementById("statTotal").textContent = totalResults.toLocaleString();
-      document.getElementById("statOA").textContent = allWorks.filter(w => w.open_access && w.open_access.is_oa).length + " / " + allWorks.length;
-      document.getElementById("statPage").textContent = currentPage + " / " + Math.ceil(totalResults / pp);
-      document.getElementById("oaStats").style.display = "grid";
-      document.getElementById("oaStatus").style.display = "none";
+      const pp = parseInt(document.getElementById('perPage').value);
+      document.getElementById('statTotal').textContent = totalResults.toLocaleString();
+      document.getElementById('statOA').textContent = allWorks.filter(w => w.open_access && w.open_access.is_oa).length + ' / ' + allWorks.length;
+      document.getElementById('statPage').textContent = currentPage + ' / ' + Math.ceil(totalResults / pp);
+      document.getElementById('oaStats').style.display = 'grid';
+      document.getElementById('oaStatus').style.display = 'none';
       if (allWorks.length === 0) {
-        document.getElementById("oaStatus").textContent = "No results - try widening your date range or selecting more topics.";
-        document.getElementById("oaStatus").style.display = "block";
+        document.getElementById('oaStatus').textContent = 'No results \u2014 try widening your date range or selecting more topics.';
+        document.getElementById('oaStatus').style.display = 'block';
       } else {
         renderPapers(allWorks);
         const totalPages = Math.ceil(totalResults / pp);
         if (totalPages > 1) {
-          document.getElementById("oaPagination").style.display = "flex";
-          document.getElementById("pageInfo").textContent = "Page " + currentPage + " of " + totalPages;
-          document.getElementById("prevBtn").disabled = currentPage <= 1;
-          document.getElementById("nextBtn").disabled = currentPage >= totalPages;
+          document.getElementById('oaPagination').style.display = 'flex';
+          document.getElementById('pageInfo').textContent = 'Page ' + currentPage + ' of ' + totalPages;
+          document.getElementById('prevBtn').disabled = currentPage <= 1;
+          document.getElementById('nextBtn').disabled = currentPage >= totalPages;
         }
       }
-    } catch(e) { showError("Could not fetch from OpenAlex: " + e.message); }
-    btn.disabled = false; btn.textContent = "Search OpenAlex";
+    } catch(e) { showError('Could not fetch from OpenAlex: ' + e.message); }
+    btn.disabled = false; btn.textContent = 'Search OpenAlex';
   }
 
   function showError(msg) {
-    document.getElementById("oaError").textContent = msg;
-    document.getElementById("oaError").style.display = "block";
-    document.getElementById("oaStatus").style.display = "none";
+    document.getElementById('oaError').textContent = msg;
+    document.getElementById('oaError').style.display = 'block';
+    document.getElementById('oaStatus').style.display = 'none';
   }
 
   function renderPapers(works) {
-    document.getElementById("paperList").innerHTML = works.map(function(w) {
-      const doi = w.doi ? w.doi.replace("https://doi.org/", "") : null;
-      const doiUrl = doi ? "https://doi.org/" + doi : null;
-      const journal = w.primary_location && w.primary_location.source ? w.primary_location.source.display_name : "";
-      const year = w.publication_date ? w.publication_date.slice(0, 4) : "";
+    document.getElementById('paperList').innerHTML = works.map(function(w) {
+      const doi = w.doi ? w.doi.replace('https://doi.org/', '') : null;
+      const doiUrl = doi ? 'https://doi.org/' + doi : null;
+      const journal = w.primary_location && w.primary_location.source ? w.primary_location.source.display_name : '';
+      const year = w.publication_date ? w.publication_date.slice(0, 4) : '';
       const cited = w.cited_by_count || 0;
-      const authors = (w.authorships || []).slice(0, 3).map(function(a) {
-        return a.author && a.author.display_name ? a.author.display_name.split(" ").pop() : "";
-      }).filter(Boolean).join(", ");
-      const more = (w.authorships && w.authorships.length > 3) ? " +" + (w.authorships.length - 3) : "";
-      const titleHtml = doiUrl ? "<a href='" + doiUrl + "' target='_blank'>" + (w.title || "Untitled") + "</a>" : (w.title || "Untitled");
+      const authors = (w.authorships || []).slice(0, 3)
+        .map(function(a) { return a.author && a.author.display_name ? a.author.display_name.split(' ').pop() : ''; })
+        .filter(Boolean).join(', ');
+      const more = (w.authorships && w.authorships.length > 3) ? ' +' + (w.authorships.length - 3) : '';
       const isOA = w.open_access && w.open_access.is_oa;
-      return "<div class='paper-card'>" +
-        "<div class='title'>" + titleHtml + "</div>" +
-        "<div class='authors'>" + authors + more + "</div>" +
-        "<div class='meta'>" +
-        (journal ? "<span class='badge badge-journal'>" + journal + "</span>" : "") +
-        (year ? "<span class='badge badge-year'>" + year + "</span>" : "") +
-        (isOA ? "<span class='badge badge-oa'>Open access</span>" : "") +
-        (cited > 0 ? "<span class='badge badge-cite'>" + cited + " citations</span>" : "") +
-        "</div></div>";
-    }).join("");
+      const titleHtml = doiUrl ? '<a href="' + doiUrl + '" target="_blank">' + (w.title || 'Untitled') + '</a>' : (w.title || 'Untitled');
+      return '<div class="paper-card">' +
+        '<div class="title">' + titleHtml + '</div>' +
+        '<div class="authors">' + authors + more + '</div>' +
+        '<div class="meta">' +
+        (journal ? '<span class="badge badge-journal">' + journal + '</span>' : '') +
+        (year ? '<span class="badge badge-year">' + year + '</span>' : '') +
+        (isOA ? '<span class="badge badge-oa">Open access</span>' : '') +
+        (cited > 0 ? '<span class="badge badge-cite">' + cited + ' citations</span>' : '') +
+        '</div></div>';
+    }).join('');
   }
 
   doSearch();
