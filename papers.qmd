@@ -7,42 +7,7 @@ page-layout: full
 
 Results pulled live from [OpenAlex](https://openalex.org) each time you load this page. Use the filters to narrow by topic, journal, or date.
 
-```{r}
-#| echo: false
-
-journals <- read.csv("journals.csv")
-
-a_journals <- journals[journals$team == "A", ]
-b_journals <- journals[journals$team == "B", ]
-
-# Helper: build tag spans with data-team attribute
-build_tags <- function(jdf, team) {
-  if (nrow(jdf) == 0) return("")
-  paste0(
-    '<span class="concept-tag active" data-id="', jdf$id,
-    '" data-team="', team, '">',
-    jdf$display_name, '</span>',
-    collapse = "\n    "
-  )
-}
-
-a_journal_tags <- build_tags(a_journals, "A")
-b_journal_tags <- build_tags(b_journals, "B")
-
-# JS ID sets — safe empty fallback if a team has no journals
-a_ids_js <- if (nrow(a_journals) > 0) paste0("'", a_journals$id, "'", collapse = ", ") else ""
-b_ids_js <- if (nrow(b_journals) > 0) paste0("'", b_journals$id, "'", collapse = ", ") else ""
-
-# B-team section: only included in HTML if B journals exist
-b_section_html <- if (nrow(b_journals) > 0) paste0(
-  '<div style="margin-top:12px;">',
-  '<div class="team-label">B team <span class="team-note">— infectious diseases / microbiology / virology papers only</span></div>',
-  '<div class="concept-tags" id="bJournalTags" style="margin:4px 0 0;">\n    ',
-  b_journal_tags,
-  '\n    </div></div>'
-) else ""
-
-htmltools::HTML(paste0('
+```{=html}
 <style>
   .oa-filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 1.5rem 0 1rem; }
   .oa-filter-group { display: flex; flex-direction: column; gap: 4px; }
@@ -60,47 +25,48 @@ htmltools::HTML(paste0('
   .btn-search { background: #FAF6E6 !important; color: #3a3028 !important; border: 1.5px solid #9aa0a8 !important; padding: 8px 22px; border-radius: 4px; font-size: 14px; cursor: pointer; transition: all 0.15s; }
   .btn-search:hover { background: #ede8d0 !important; border-color: #5a6472 !important; color: #5a6472 !important; }
   .btn-search:disabled { opacity: 0.4; cursor: not-allowed; }
-  .btn-outline { background: #FAF6E6 !important; color: #3a3028 !important; border: 1.5px solid #9aa0a8 !important; padding: 8px 16px; border-radius: 4px; font-size: 13px; cursor: pointer; transition: all 0.15s; }
-  .btn-outline:hover { background: #ede8d0 !important; border-color: #5a6472 !important; color: #5a6472 !important; }
   .oa-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.5rem; }
   .stat-box { background: #ede8d0 !important; border-radius: 4px; padding: 0.75rem 1rem; border: 1px solid #c9c0a0 !important; }
   .stat-box .label { font-size: 11px; color: #7a6a58 !important; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
   .stat-box .value { font-size: 22px; font-weight: 600; color: #3a3028 !important; }
   .paper-list { display: flex; flex-direction: column; gap: 10px; }
-  .paper-card { background: #fffdf5; border: 1px solid #c9c0a0; border-radius: 4px; padding: 1rem 1.25rem; transition: border-color 0.15s; }
-  .paper-card:hover { border-color: #5a6472; }
-  .paper-card .title { font-size: 15px; font-weight: 600; color: #3a3028; margin-bottom: 5px; line-height: 1.45; }
-  .paper-card .title a { color: #5a6472; text-decoration: none; }
+  .paper-card { background: #fffdf5 !important; border: 1px solid #c9c0a0 !important; border-radius: 4px; padding: 1rem 1.25rem; transition: border-color 0.15s; }
+  .paper-card:hover { border-color: #5a6472 !important; }
+  .paper-card .title { font-size: 15px; font-weight: 600; color: #3a3028 !important; margin-bottom: 5px; line-height: 1.45; }
+  .paper-card .title a { color: #5a6472 !important; text-decoration: none; }
   .paper-card .title a:hover { text-decoration: underline; }
-  .paper-card .authors { font-size: 12px; color: #7a6a58; margin-bottom: 8px; }
+  .paper-card .authors { font-size: 12px; color: #7a6a58 !important; margin-bottom: 8px; }
   .paper-card .meta { display: flex; flex-wrap: wrap; gap: 6px; }
   .badge { font-size: 11px; padding: 2px 9px; border-radius: 3px; }
-  .badge-journal { background: #ede8d0; color: #5a6472; border: 1px solid #c9c0a0; }
-  .badge-oa { background: #e8f5d8; color: #4a7c20; }
-  .badge-year { background: #ede8d0; color: #7a6a58; }
-  .badge-cite { background: #ede8d0; color: #7a6a58; }
-  .oa-status { text-align: center; padding: 2rem 0; color: #7a6a58; font-size: 14px; }
-  .oa-error { padding: 1rem; background: #fef2f2; border: 1px solid #fca5a5; border-radius: 4px; color: #b91c1c; font-size: 13px; margin-bottom: 1rem; }
+  .badge-journal { background: #ede8d0 !important; color: #5a6472 !important; border: 1px solid #c9c0a0 !important; }
+  .badge-oa { background: #e8f5d8 !important; color: #4a7c20 !important; }
+  .badge-year { background: #ede8d0 !important; color: #7a6a58 !important; }
+  .badge-cite { background: #ede8d0 !important; color: #7a6a58 !important; }
+  .oa-status { text-align: center; padding: 2rem 0; color: #7a6a58 !important; font-size: 14px; }
+  .oa-error { padding: 1rem; background: #fef2f2 !important; border: 1px solid #fca5a5 !important; border-radius: 4px; color: #b91c1c !important; font-size: 13px; margin-bottom: 1rem; }
   .pagination { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 1.5rem; }
   .page-btn { background: #FAF6E6 !important; border: 1.5px solid #9aa0a8 !important; border-radius: 4px; padding: 6px 16px; font-size: 13px; cursor: pointer; color: #3a3028 !important; transition: all 0.15s; }
   .page-btn:hover { background: #ede8d0 !important; border-color: #5a6472 !important; color: #5a6472 !important; }
   .page-btn:disabled { opacity: 0.3; cursor: not-allowed; }
-  .page-info { font-size: 13px; color: #7a6a58; }
-  .section-label { font-size: 11px; color: #7a6a58; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-  hr.oa-divider { border: none; border-top: 1px solid #c9c0a0; margin: 1rem 0; }
+  .page-info { font-size: 13px; color: #7a6a58 !important; }
+  .section-label { font-size: 11px; color: #7a6a58 !important; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+  hr.oa-divider { border: none; border-top: 1px solid #c9c0a0 !important; margin: 1rem 0; }
   @media (prefers-color-scheme: dark) {
     .oa-filter-group select, .oa-filter-group input { background: #2a2a2a !important; border-color: #555 !important; color: #ddd !important; }
     .concept-tag { background: #2a2a2a !important; color: #ccc !important; border-color: #555 !important; }
     .concept-tag.active { background: #5a6472 !important; border-color: #5a6472 !important; color: white !important; }
-    .btn-search, .btn-outline { background: #2a2a2a !important; color: #ddd !important; border-color: #888 !important; }
+    .btn-search { background: #2a2a2a !important; color: #ddd !important; border-color: #888 !important; }
     .stat-box { background: #1e1e1e !important; border-color: #444 !important; }
     .stat-box .value { color: #e0ddd0 !important; }
-    .paper-card { background: #1e1e1e; border-color: #444; }
-    .paper-card .title a { color: #9ab0c0; }
-    .paper-card .authors { color: #aaa; }
-    .badge-journal { background: #252a30; color: #9ab0c0; border-color: #555; }
-    .badge-year, .badge-cite { background: #2a2a2a; color: #aaa; }
+    .paper-card { background: #1e1e1e !important; border-color: #444 !important; }
+    .paper-card .title { color: #e0ddd0 !important; }
+    .paper-card .title a { color: #9ab0c0 !important; }
+    .paper-card .authors { color: #aaa !important; }
+    .badge-journal { background: #252a30 !important; color: #9ab0c0 !important; border-color: #555 !important; }
+    .badge-year, .badge-cite { background: #2a2a2a !important; color: #aaa !important; }
     .page-btn { background: #2a2a2a !important; border-color: #888 !important; color: #ddd !important; }
+    .oa-status { color: #aaa !important; }
+    .section-label, .team-label { color: #aaa !important; }
   }
 </style>
 
@@ -130,9 +96,38 @@ htmltools::HTML(paste0('
     <label>Journals</label>
     <div class="team-label">A team <span class="team-note">— all papers</span></div>
     <div class="concept-tags" id="aJournalTags" style="margin: 4px 0 0;">
-    ', a_journal_tags, '
+      <!-- ═══ PASTE A-TEAM JOURNAL TAGS HERE (section 1 from generate_journals.R) ═══ -->
+         <span class="concept-tag active" data-id="https://openalex.org/S23772524" data-team="A">The Lancet Infectious Diseases</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S2531945440" data-team="A">The Lancet HIV</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S19579164" data-team="A">Journal of Infection</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S87161179" data-team="A">Journal of Hospital Infection</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S71414007" data-team="A">Clinical Microbiology and Infection</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S2735126445" data-team="A">Open Forum Infectious Diseases</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S72350973" data-team="A">Clinical Infectious Diseases</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S87161179" data-team="A">Journal of Hospital Infection</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S46544255" data-team="A">PLoS neglected tropical diseases</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S53087977" data-team="A">Journal of Clinical Microbiology</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S189281586" data-team="A">Emerging infectious diseases</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S54542293" data-team="A">The Journal of Infectious Diseases</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S171015910" data-team="A">BMC Infectious Diseases</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S2764760790" data-team="A">Emerging Microbes & Infections</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S2004986" data-team="A">PLoS Pathogens</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S2764926557" data-team="A">Nature Microbiology</span> 
     </div>
-    ', b_section_html, '
+
+    <!-- ═══ B-TEAM SECTION — remove this block entirely if no B-team journals ═══-->
+    <div style="margin-top:12px;">
+      <div class="team-label">B team <span class="team-note">— infectious diseases / microbiology / virology papers only</span></div>
+      <div class="concept-tags" id="bJournalTags" style="margin:4px 0 0;">
+     <!--   PASTE B-TEAM JOURNAL TAGS HERE (section 2 from generate_journals.R) -->
+      </div>
+    <span class="concept-tag active" data-id="https://openalex.org/S49861241" data-team="B">The Lancet</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S4393917726" data-team="B">BMJ</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S125754415" data-team="B">Proceedings of the National Academy of Sciences</span>
+    <span class="concept-tag active" data-id="https://openalex.org/S172573765" data-team="B">JAMA</span> 
+    </div>
+    
+
   </div>
   <div class="oa-filter-group">
     <label>Access</label>
@@ -184,10 +179,10 @@ htmltools::HTML(paste0('
   let totalResults = 0;
   let selectedConcepts = new Set();
 
-  // A team: all papers from these journals
-  // B team: only papers matching Infectious Diseases / Microbiology / Virology subfields
-  let selectedAJournals = new Set([', a_ids_js, ']);
-  let selectedBJournals = new Set([', b_ids_js, ']);
+  // ═══ PASTE JS SET LINES HERE (section 3 from generate_journals.R) ═══
+  let selectedAJournals = new Set([]);
+  let selectedBJournals = new Set([]);
+  // ════════════════════════════════════════════════════════════════════
 
   const B_SUBFIELDS = "topics.subfield.display_name:Infectious Diseases|Microbiology|Virology";
 
@@ -248,7 +243,6 @@ htmltools::HTML(paste0('
     if (selectedAJournals.size === 0 && selectedBJournals.size === 0 && selectedConcepts.size === 0) {
       showError("Please select at least one journal or topic."); return;
     }
-
     const btn = document.getElementById("searchBtn");
     btn.disabled = true; btn.textContent = "Searching...";
     document.getElementById("oaError").style.display = "none";
@@ -257,9 +251,7 @@ htmltools::HTML(paste0('
     document.getElementById("paperList").innerHTML = "";
     document.getElementById("oaStats").style.display = "none";
     document.getElementById("oaPagination").style.display = "none";
-
     try {
-      // Fire A and B fetches in parallel; only include a team if it has selected journals
       const fetches = [];
       if (selectedAJournals.size > 0) fetches.push(
         fetch(buildBaseUrl(buildCommonFilters(selectedAJournals), currentPage))
@@ -269,36 +261,27 @@ htmltools::HTML(paste0('
         fetch(buildBaseUrl(buildCommonFilters(selectedBJournals) + "," + B_SUBFIELDS, currentPage))
           .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       );
-
       const results = await Promise.all(fetches);
-
-      // Merge and sum totals across both teams
       let allWorks = [];
       totalResults = 0;
       results.forEach(data => {
         totalResults += data.meta ? data.meta.count : 0;
         allWorks = allWorks.concat(data.results || []);
       });
-
-      // Deduplicate by OpenAlex ID
       const seen = new Set();
       allWorks = allWorks.filter(w => { if (seen.has(w.id)) return false; seen.add(w.id); return true; });
-
-      // Re-sort the merged page client-side to match chosen sort order
       const sort = document.getElementById("sortFilter").value;
       if (sort === "publication_date:desc") {
         allWorks.sort((a, b) => new Date(b.publication_date || 0) - new Date(a.publication_date || 0));
       } else if (sort === "cited_by_count:desc") {
         allWorks.sort((a, b) => (b.cited_by_count || 0) - (a.cited_by_count || 0));
       }
-
       const pp = parseInt(document.getElementById("perPage").value);
       document.getElementById("statTotal").textContent = totalResults.toLocaleString();
       document.getElementById("statOA").textContent = allWorks.filter(w => w.open_access && w.open_access.is_oa).length + " / " + allWorks.length;
       document.getElementById("statPage").textContent = currentPage + " / " + Math.ceil(totalResults / pp);
       document.getElementById("oaStats").style.display = "grid";
       document.getElementById("oaStatus").style.display = "none";
-
       if (allWorks.length === 0) {
         document.getElementById("oaStatus").textContent = "No results - try widening your date range or selecting more topics.";
         document.getElementById("oaStatus").style.display = "block";
@@ -333,21 +316,20 @@ htmltools::HTML(paste0('
         return a.author && a.author.display_name ? a.author.display_name.split(" ").pop() : "";
       }).filter(Boolean).join(", ");
       const more = (w.authorships && w.authorships.length > 3) ? " +" + (w.authorships.length - 3) : "";
-      const titleHtml = doiUrl ? "<a href=\\"" + doiUrl + "\\" target=\\"_blank\\">" + (w.title || "Untitled") + "</a>" : (w.title || "Untitled");
+      const titleHtml = doiUrl ? "<a href='" + doiUrl + "' target='_blank'>" + (w.title || "Untitled") + "</a>" : (w.title || "Untitled");
       const isOA = w.open_access && w.open_access.is_oa;
-      return "<div class=\\"paper-card\\">" +
-        "<div class=\\"title\\">" + titleHtml + "</div>" +
-        "<div class=\\"authors\\">" + authors + more + "</div>" +
-        "<div class=\\"meta\\">" +
-        (journal ? "<span class=\\"badge badge-journal\\">" + journal + "</span>" : "") +
-        (year ? "<span class=\\"badge badge-year\\">" + year + "</span>" : "") +
-        (isOA ? "<span class=\\"badge badge-oa\\">Open access</span>" : "") +
-        (cited > 0 ? "<span class=\\"badge badge-cite\\">" + cited + " citations</span>" : "") +
+      return "<div class='paper-card'>" +
+        "<div class='title'>" + titleHtml + "</div>" +
+        "<div class='authors'>" + authors + more + "</div>" +
+        "<div class='meta'>" +
+        (journal ? "<span class='badge badge-journal'>" + journal + "</span>" : "") +
+        (year ? "<span class='badge badge-year'>" + year + "</span>" : "") +
+        (isOA ? "<span class='badge badge-oa'>Open access</span>" : "") +
+        (cited > 0 ? "<span class='badge badge-cite'>" + cited + " citations</span>" : "") +
         "</div></div>";
     }).join("");
   }
 
   doSearch();
 </script>
-'))
 ```
