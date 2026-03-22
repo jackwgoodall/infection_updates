@@ -1,11 +1,13 @@
 ---
 title: "Latest Papers"
-description: "Live feed from OpenAlex — recent publications in infectious disease and related fields."
 toc: false
 page-layout: full
 ---
 
-Results pulled live from [OpenAlex](https://openalex.org) each time you load this page. Use the filters to narrow by topic, journal, or date.
+Results pulled live from [OpenAlex's](https://openalex.org) API each time you load this page. Use the filters to narrow by topic, journal, or date.<br>
+All journals and topics are selected by default.  You can toggle off the ones you want and the search button to update.<br>
+Please [get in touch](about.qmd) with suggestions on journals to add or ways to improve this feed.
+
 
 ```{=html}
 <div class="section-label">Filter by topic (optional)</div>
@@ -33,7 +35,7 @@ Results pulled live from [OpenAlex](https://openalex.org) each time you load thi
 
   <div class="oa-filter-group" style="grid-column: 1 / -1;">
     <label>Journals</label>
-    <div class="team-label">Infection Journals <span class="team-note">— all papers</span></div>
+    <div class="team-label">Infection Jurn <span class="team-note">— all papers</span></div>
     <div class="concept-tags" id="aJournalTags" style="margin: 4px 0 8px;">
       <span class="concept-tag active" data-id="S23772524" data-team="A">The Lancet Infectious Diseases</span>
       <span class="concept-tag active" data-id="S2531945440" data-team="A">The Lancet HIV</span>

@@ -1,11 +1,11 @@
 ---
-title: "Jack Goodall"
-subtitle: "Infectious Disease Research Blog"
+title: "Infectious Disease Research Updates"
+subtitle: "A blog and paper search tool for infection clinicians"
 page-layout: full
 toc: false
 ---
 
-This site is home to brief summaries of infectious diseases papers I found interesting and an OpenAlex powered feed of high impact infection papers.
+This site is home to brief summaries of clinical infection papers I found interesting and an [OpenAlex](https://openalex.org/) powered feed of high impact infection papers.
 
 ::: {.grid}
 
@@ -14,17 +14,23 @@ This site is home to brief summaries of infectious diseases papers I found inter
 
 See the [Blog](blog.qmd) for all posts.
 
-Please do [email me](mailto:jack.goodall@lshtm.ac.uk) with suggestions for papers to review, or (even better) if you want to write the review.
-
+Please do [get in touch](about.qmd) with suggestions for papers to review, or (even better) if you want to write the review.
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 ### What's publishing now
 
-The [Latest Papers](papers.qmd) page pulls live from OpenAlex — recent publications across infectious disease, microbiology, virology epidemiology from selected high-impact journals.
+The [Latest Papers](papers.qmd) page pulls recent publications in real time from OpenAlex.  It aims to show you all recent relevant publications across infectious disease, microbiology, virology and epidemiology from selected high-impact journals. <br>Some of these are infection-specific, and all results are pulled. Others are high-impact generalist journals where only infection-themed papers are shown.
 
-Please do 
-
+Please do [get in touch](about.qmd) if you have journals you think should be included or have ways you think this feed could be improved.
 :::
 
+:::
+<br><br><br>
+*I am very grateful to the Wellcome Trust and the London School of Hygiene and Tropical Medicine's [CREATE PhD Programme](https://www.create-phd.org/), which gives me the time and brain space to do things like this. However, they have not had provided any input or editorial oversight of the website's contents. That's on me.*
+
+::: {style="text-align: center; margin-top: 1.5rem;"}
+![](logos/create.png){width=150 style="margin: 0 1rem;"}
+![](logos/Wellcome_Trust_logo.svg){width=120 style="margin: 0 1rem;"}
+![](logos/LSHTM_Logo_Black.png){width=150 style="margin: 0 1rem;"}
 :::
