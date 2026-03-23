@@ -1,4 +1,4 @@
-name: Deploy Quarto Site
+name: Publish to GitHub Pages
 
 on:
   push:
@@ -6,13 +6,19 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Check out repo
         uses: actions/checkout@v4
 
       - name: Set up Quarto
@@ -20,13 +26,21 @@ jobs:
 
       - name: Render site
         uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html
 
-      - name: Copy rendered files to root and push
-        run: |
-          cp -r docs/. .
-          touch .nojekyll
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git diff --staged --quiet || git commit -m "Render site [skip ci]"
-          git push
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
