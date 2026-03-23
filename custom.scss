@@ -58,7 +58,8 @@ blockquote {
   color: #6a5a4a;
 }
 
-#TOC a { color: #5a6472; }
+#TOC a { color: #888880 !important; }
+#TOC a:hover { color: #3a3028 !important; }
 html { scroll-behavior: smooth; }
 
 /* ── Papers page ── */

@@ -3,7 +3,7 @@ title: "What are we doing here?"
 description: "Getting this site up and running, and what I plan to write about."
 author: "[Jack Goodall](/about.qmd#jack-goodall)"
 date: 20-03-2026
-categories: [intro]
+categories: [Intro]
 ---
 
 This is the start of a blog and website that I have made, mostly with the aim of staying up to date with clinical research whilst I am away doing a (quite niche) PhD.  If anyone else finds it useful along the way, so much the better.

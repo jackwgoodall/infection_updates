@@ -82,6 +82,7 @@ Please [get in touch](about.qmd) with suggestions on journals to add or ways to 
       <option value="10">10</option>
       <option value="25" selected>25</option>
       <option value="50">50</option>
+      <option value="100">100</option>
     </select>
   </div>
 </div>
@@ -120,12 +121,12 @@ Please [get in touch](about.qmd) with suggestions on journals to add or ways to 
     Array.from(document.querySelectorAll('#bJournalTags .concept-tag')).map(t => t.dataset.id)
   );
 
-  // B-team filter: only show ID / microbiology / virology subfields
-  const B_SUBFIELDS = 'topics.subfield.id:2725|2404|2726';
+  // B-team filter: only show ID / microbiology / virology / parasitology subfields
+  const B_SUBFIELDS = 'topics.subfield.id:2725|2404|2726|2405';
 
   const today = new Date();
-  const ago1m = new Date(today); ago1m.setMonth(today.getMonth() - 1);
-  document.getElementById('fromDate').value = ago1m.toISOString().split('T')[0];
+  const ago1w = new Date(today); ago1w.setDate(today.getDate() - 7);
+  document.getElementById('fromDate').value = ago1w.toISOString().split('T')[0];
   document.getElementById('toDate').value = today.toISOString().split('T')[0];
 
   document.querySelectorAll('#conceptTags .concept-tag').forEach(tag => {

@@ -1,0 +1,55 @@
+---
+title: "Ceftolozane-tazobactam vs. ceftazidime-avibactam for MDR/DTR *Pseudomonas*"
+description: "Getting this site up and running, and what I plan to write about."
+author: "[Jack Goodall](/about.qmd#jack-goodall)"
+date: 23-03-2026
+categories: [MDR, Antibiotics, Pseudomonas]
+---
+
+**Title:** Comparison of ceftolozane-tazobactam and ceftazidime-avibactam in the treatment of MDR/DTR *Pseudomonas aeruginosa* infections: a systematic review and meta-analysis
+
+**Journal**: Clinical Infectious Diseases
+
+**Published:** 18 March 2026
+
+**Authors:** Milo Gatti , Riccardo De Paola, Beatrice Giorgi, Federico Pea
+
+<https://doi.org/10.1093/cid/ciag194>
+
+## TLDR;
+
+For the treatment of MDR/DTR *Pseudomonas c*eftolozane-tazobactam appears superior to ceftazidime-avibactam in this meta-analysis, although the evidence base remains a little shakey.
+
+## Background
+
+Anyone who works in infection medicine will happily agree that *Pseudomonas aeruginosa* is a pain. It colonises damaged tissue (normally lungs) and gets into the water supply of inopportune places at inopportune times. It always seems to affect the wrong patient at the wrong time. The only thing that makes it more annoying is when it becomes resistant to the (short list) of first-line agents.
+
+When I was on my first ever microbiology placement, I was pondering the best antibiotic choice for a recent stem-cell transplant patient on ITU with an MDR *Pseudomonas* line infection with one of the microbiology consultants (a certain \[Chris Lynch\](<https://orcid.org/0000-0002-2072-3885>)). He felt that of the two canonical treatments –ceftolozane-tazobactam and ceftazidime-avibactam– the former was a better bet given that the latter needed both agents at the right tissue concentration to be effective. Although he cautioned that this was more a gut feeling than an evidence-based statement, it is nice to see him (probably) proved right four years down the line.
+
+## Methods
+
+This systematic review and meta-analysis searched the PubMed-MEDLINE and Scopus databases for RCTs and observational studies comparing the efficacy of the two agents for the treatment of MDR/DTR *Pseudomonas* from inception until November 2025. They excluded studies which did not quantify outcomes, have a comparator group or attempt to adjust for sensible confounders.
+
+Their primary endpoint was clinical cure (as defined by the original studies), with microbiological failure, 90-day resistance and 30-day mortality as secondary outcomes.
+
+## Findings
+
+Six studies were included, all of which were observational.
+
+One was prospective and five retrospective. Four were multicentric and two were single center. Four were conducted in the US, and one each in Saudi Arabia and in the UAE.
+
+Overall, 1,161 patients were included (644 receiving ceftolozane-tazobactam vs. 517 receiving ceftazidime-avibactam).
+
+Pneumonia represented the most frequent infection site in all of the included studies (49%-100%), followed by blood stream infections (4%-24%).
+
+In most of the studies the demographics, underlying comorbidities, severity of clinical conditions and infection site/type were comparable. The only exception was one study, where there was a higher prevalence of immunosuppressed patients in the ceftolozane-tazobactam group.
+
+They found no significant evidence of publication bias or heterogeneity. Half the studies had a moderate risk of bias and the other half had a severe risk of bias, mostly due to confounding.
+
+Clinical cure was higher in those treated with ceftolozane-tazobactam with and odds ratio of 1.82 (95% CI 1.10-2.99; p=0.02).
+
+Three studies reported 90-day resistance, two reported microbiological failure and four reported 30-day mortality with no significant differences found between these two end points.
+
+## Summary 
+
+This isn't perfect - all the studies included were observation and the risk of bias was high. They went able to do an individual-patient level meta-analysis and so are reliant on how well the original studies adjusted for confounders. However, this is an important and frequently encountered clinical question – and currently this seems to be me to be the best we have.
