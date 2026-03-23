@@ -1,6 +1,5 @@
 ---
 title: "Ceftolozane-tazobactam vs. ceftazidime-avibactam for MDR/DTR *Pseudomonas*"
-description: "Getting this site up and running, and what I plan to write about."
 author: "[Jack Goodall](/about.qmd#jack-goodall)"
 date: 23-03-2026
 categories: [MDR, Antibiotics, Pseudomonas]
