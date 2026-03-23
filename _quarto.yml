@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: docs
+  resources: "/*"
 
 website:
   title: "Infection Research Updates"
@@ -14,8 +15,6 @@ website:
         text: Blog
       - href: papers.qmd
         text: Latest Papers
-      - href: resources.qmd
-        text: Useful Resources
       - href: about.qmd
         text: About
     right:
@@ -23,6 +22,8 @@ website:
         href: https://github.com/jackwgoodall
       - icon: bluesky
         href: https://bsky.app/profile/jackwgoodall.bsky.social
+      - text: "<img src='logos/orcid.svg' width='18' height='18' style='vertical-align: -2px;'>"
+        href: https://orcid.org/0000-0003-0997-5528
   page-footer:
     center: "Jack Goodall · Built with [Quarto](https://quarto.org) · Hosted with [GitHub Pages](https://docs.github.com/en/pages) "
 
@@ -32,3 +33,4 @@ format:
     css: styles.css
     toc: true
     toc-depth: 2
+    base-url: ""
