@@ -1,0 +1,212 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m a UK infectious disease registrar and researcher with interests in pathogen dynamics. I made this site mainly to force me to keep up with the medical literature and to try and remember some clinical medicine whilst I’m away from clinical practice doing quite a niche PhD.\nAS an aside I’ve written a guide to using markdown for researchers. Markdown is a great way to communicate early findings with colleagues and collaborators by embedding results and figures with structured text. You can find it here.\n\n\n\nGitHub: jackwgoodall\nEmail: j.goodall@sheffield.ac.uk or jack.goodall@lshtm.ac.uk"
+  },
+  {
+    "objectID": "about.html#jack-goodall",
+    "href": "about.html#jack-goodall",
+    "title": "About",
+    "section": "",
+    "text": "I’m a UK infectious disease registrar and researcher with interests in pathogen dynamics. I made this site mainly to force me to keep up with the medical literature and to try and remember some clinical medicine whilst I’m away from clinical practice doing quite a niche PhD.\nAS an aside I’ve written a guide to using markdown for researchers. Markdown is a great way to communicate early findings with colleagues and collaborators by embedding results and figures with structured text. You can find it here.\n\n\n\nGitHub: jackwgoodall\nEmail: j.goodall@sheffield.ac.uk or jack.goodall@lshtm.ac.uk"
+  },
+  {
+    "objectID": "about.html#website-built-with",
+    "href": "about.html#website-built-with",
+    "title": "About",
+    "section": "Website built with",
+    "text": "Website built with\n\nQuarto\nOpenAlex — open access collection of published works\nGitHub Pages — web hosting"
+  },
+  {
+    "objectID": "papers.html",
+    "href": "papers.html",
+    "title": "Latest Papers",
+    "section": "",
+    "text": "Results pulled live from OpenAlex’s API each time you load this page. Use the filters to narrow by topic, journal, or date. All journals and topics are selected by default. You can toggle off the ones you want and the search button to update. Please get in touch with suggestions on journals to add or ways to improve this feed.\nFilter by topic (optional)\n\n  Infectious disease\n  Antimicrobial resistance\n  Epidemiology\n  Virology\n  Immunology\n  Tropical disease\n  Vaccination\n\n\n\n\n\n  \n    From date\n    \n  \n  \n    To date\n    \n  \n\n  \n    Journals\n    Infection Jurn — all papers\n    \n      The Lancet Infectious Diseases\n      The Lancet HIV\n      Journal of Infection\n      Journal of Hospital Infection\n      Clinical Microbiology and Infection\n      Open Forum Infectious Diseases\n      Clinical Infectious Diseases\n      PLoS Neglected Tropical Diseases\n      Journal of Clinical Microbiology\n      Emerging Infectious Diseases\n      The Journal of Infectious Diseases\n      BMC Infectious Diseases\n      Emerging Microbes & Infections\n      PLoS Pathogens\n      Nature Microbiology\n    \n    Generalist Journals — infectious diseases / microbiology / virology papers only\n    \n      The Lancet\n      BMJ\n      PNAS\n      JAMA\n    \n  \n\n  \n    Access\n    \n      All papers\n      Open access only\n    \n  \n  \n    Sort by\n    \n      Newest first\n      Most cited\n    \n  \n  \n    Per page\n    \n      10\n      25\n      50\n      100\n    \n  \n\n\n\n  Search OpenAlex\n\n\n\nLoading latest papers…\n\n\n  Total results—\n  Open access on this page—\n  Page—\n\n\n\n\n\n  ← Prev\n  \n  Next →"
+  },
+  {
+    "objectID": "posts/ceftolozane-tazobactam.html",
+    "href": "posts/ceftolozane-tazobactam.html",
+    "title": "Ceftolozane-tazobactam vs. ceftazidime-avibactam for MDR/DTR Pseudomonas",
+    "section": "",
+    "text": "Title: Comparison of ceftolozane-tazobactam and ceftazidime-avibactam in the treatment of MDR/DTR Pseudomonas aeruginosa infections: a systematic review and meta-analysis\nJournal: Clinical Infectious Diseases\nPublished: 18 March 2026\nAuthors: Milo Gatti , Riccardo De Paola, Beatrice Giorgi, Federico Pea\nhttps://doi.org/10.1093/cid/ciag194"
+  },
+  {
+    "objectID": "posts/ceftolozane-tazobactam.html#tldr",
+    "href": "posts/ceftolozane-tazobactam.html#tldr",
+    "title": "Ceftolozane-tazobactam vs. ceftazidime-avibactam for MDR/DTR Pseudomonas",
+    "section": "TLDR;",
+    "text": "TLDR;\nFor the treatment of MDR/DTR Pseudomonas ceftolozane-tazobactam appears superior to ceftazidime-avibactam in this meta-analysis, although the evidence base remains a little shakey."
+  },
+  {
+    "objectID": "posts/ceftolozane-tazobactam.html#background",
+    "href": "posts/ceftolozane-tazobactam.html#background",
+    "title": "Ceftolozane-tazobactam vs. ceftazidime-avibactam for MDR/DTR Pseudomonas",
+    "section": "Background",
+    "text": "Background\nAnyone who works in infection medicine will happily agree that Pseudomonas aeruginosa is a pain. It colonises damaged tissue (normally lungs) and gets into the water supply of inopportune places at inopportune times. It always seems to affect the wrong patient at the wrong time. The only thing that makes it more annoying is when it becomes resistant to the (short list) of first-line agents.\nWhen I was on my first ever microbiology placement, I was pondering the best antibiotic choice for a recent stem-cell transplant patient on ITU with an MDR Pseudomonas line infection with one of the microbiology consultants (a certain [Chris Lynch](https://orcid.org/0000-0002-2072-3885)). He felt that of the two canonical treatments –ceftolozane-tazobactam and ceftazidime-avibactam– the former was a better bet given that the latter needed both agents at the right tissue concentration to be effective. Although he cautioned that this was more a gut feeling than an evidence-based statement, it is nice to see him (probably) proved right four years down the line."
+  },
+  {
+    "objectID": "posts/ceftolozane-tazobactam.html#methods",
+    "href": "posts/ceftolozane-tazobactam.html#methods",
+    "title": "Ceftolozane-tazobactam vs. ceftazidime-avibactam for MDR/DTR Pseudomonas",
+    "section": "Methods",
+    "text": "Methods\nThis systematic review and meta-analysis searched the PubMed-MEDLINE and Scopus databases for RCTs and observational studies comparing the efficacy of the two agents for the treatment of MDR/DTR Pseudomonas from inception until November 2025. They excluded studies which did not quantify outcomes, have a comparator group or attempt to adjust for sensible confounders.\nTheir primary endpoint was clinical cure (as defined by the original studies), with microbiological failure, 90-day resistance and 30-day mortality as secondary outcomes."
+  },
+  {
+    "objectID": "posts/ceftolozane-tazobactam.html#findings",
+    "href": "posts/ceftolozane-tazobactam.html#findings",
+    "title": "Ceftolozane-tazobactam vs. ceftazidime-avibactam for MDR/DTR Pseudomonas",
+    "section": "Findings",
+    "text": "Findings\nSix studies were included, all of which were observational.\nOne was prospective and five retrospective. Four were multicentric and two were single center. Four were conducted in the US, and one each in Saudi Arabia and in the UAE.\nOverall, 1,161 patients were included (644 receiving ceftolozane-tazobactam vs. 517 receiving ceftazidime-avibactam).\nPneumonia represented the most frequent infection site in all of the included studies (49%-100%), followed by blood stream infections (4%-24%).\nIn most of the studies the demographics, underlying comorbidities, severity of clinical conditions and infection site/type were comparable. The only exception was one study, where there was a higher prevalence of immunosuppressed patients in the ceftolozane-tazobactam group.\nThey found no significant evidence of publication bias or heterogeneity. Half the studies had a moderate risk of bias and the other half had a severe risk of bias, mostly due to confounding.\nClinical cure was higher in those treated with ceftolozane-tazobactam with and odds ratio of 1.82 (95% CI 1.10-2.99; p=0.02).\nThree studies reported 90-day resistance, two reported microbiological failure and four reported 30-day mortality with no significant differences found between these two end points."
+  },
+  {
+    "objectID": "posts/ceftolozane-tazobactam.html#summary",
+    "href": "posts/ceftolozane-tazobactam.html#summary",
+    "title": "Ceftolozane-tazobactam vs. ceftazidime-avibactam for MDR/DTR Pseudomonas",
+    "section": "Summary",
+    "text": "Summary\nThis isn’t perfect - all the studies included were observation and the risk of bias was high. They went able to do an individual-patient level meta-analysis and so are reliant on how well the original studies adjusted for confounders. However, this is an important and frequently encountered clinical question – and currently this seems to be me to be the best we have."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Top 10 (ish) papers of 2025\n\n\n\nMDR\n\nAntibiotics\n\nPseudomonas\n\n\n\n\n\n\nNov 3, 2027\n\n12 min\n\n\n\n\n\n\nCeftolozane-tazobactam vs. ceftazidime-avibactam for MDR/DTR Pseudomonas\n\n\n\nMDR\n\nAntibiotics\n\nPseudomonas\n\n\n\n\n\n\nNov 3, 2027\n\n3 min\n\n\n\n\n\n\nWhat are we doing here?\n\n\n\nIntro\n\n\n\n\n\n\nAug 3, 2027\n\n1 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Infectious Disease Research Updates",
+    "section": "",
+    "text": "This site is home to brief summaries of clinical infection papers I found interesting and an OpenAlex powered feed of high impact infection papers.\n\n\nLatest posts\nThe Blog has spotlights on individual, recent papers that I think are clinically important.\nPlease do get in touch with suggestions for papers to review, or (even better) if you want to write the review. The README on the main github has a guide to writing a blog post.\n\n\nWhat’s publishing now\nThe Latest Papers page pulls recent publications in real time from OpenAlex. It shows all recent publications across infectious disease, microbiology, virology, parasitology and epidemiology from selected high-impact journals.\nPlease do get in touch if you have journals you think should be included or have ways you think this feed could be improved.\n\n\n\nUseful Resources\nThe Useful Resources has a highly subjective collection of resources I think are useful. Again, please do get in touch if you have suggestions on additions to this, or feel free to add them yourself.\n I am very grateful to the Wellcome Trust and the London School of Hygiene and Tropical Medicine’s CREATE PhD Programme, who give me the time and brain space to do things like this. However, they have not had provided any input or editorial oversight of the website’s contents. That’s on me."
+  },
+  {
+    "objectID": "posts/top10_2025.html",
+    "href": "posts/top10_2025.html",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "",
+    "text": "Along with my colleague Hermaleigh Townsley I made this run down of the top, practice changing papers of 2025. It was originally a presentation to our clinical ID department in Sheffield and I’ve stripped out the summaries for this post.\nIt is heavily inspired by the wonderful summaries that Josh Davis has been doing for several years (he was joined this year by Steve Tong, Emily McDonald and Bassem Ghanem)."
+  },
+  {
+    "objectID": "posts/top10_2025.html#mosnodenvir-for-dengue-prophylaxis",
+    "href": "posts/top10_2025.html#mosnodenvir-for-dengue-prophylaxis",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "1. Mosnodenvir for Dengue Prophylaxis",
+    "text": "1. Mosnodenvir for Dengue Prophylaxis\nDurbin AP et al. Daily Mosnodenvir as Dengue Prophylaxis in a Controlled Human Infection Model. N Engl J Med. 2025;393(21):2107–2118. DOI: 10.1056/NEJMoa2500179\nWhy it matters: Dengue threatens approximately half the world’s population. No approved antiviral treatment or rapid prophylaxis currently exists, and vaccines require weeks to confer protection.\nStudy design: Phase 2a, double-blind, randomised, placebo-controlled human challenge trial. 30 healthy adults without prior dengue/Zika exposure were given oral mosnodenvir (low, medium, or high dose) for 5 days before and 21 days after subcutaneous inoculation with an attenuated DENV-3 strain.\nKey results: 60% of participants in the high-dose group had no detectable DENV-3 RNA after challenge, compared to 0% in the placebo group. Fewer symptoms in the high-dose group wih similar adverse effect profiles across groups. Emerging RNA variations (potential resistance signals) were detected in all mosnodenvir recipients with detectable viral RNA, and in none of the placebo group, which is a significant note of caution.\n\nCaveat: Johnson & Johnson discontinued further development in 2024. The drug’s future is currently in limbo, though licensing negotiations are reportedly ongoing."
+  },
+  {
+    "objectID": "posts/top10_2025.html#partner-treatment-for-bacterial-vaginosis",
+    "href": "posts/top10_2025.html#partner-treatment-for-bacterial-vaginosis",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "2. Partner Treatment for Bacterial Vaginosis",
+    "text": "2. Partner Treatment for Bacterial Vaginosis\nVodstrcil LA et al. Male-Partner Treatment to Prevent Recurrence of Bacterial Vaginosis. N Engl J Med. 2025;392(10):947–957. DOI: 10.1056/NEJMoa2405404\nWhy it matters: Bacterial vaginosis (BV) is the most common vaginal condition in reproductive-age women worldwide, affecting around 1 in 3. Recurrence rates after standard treatment exceed 50% at 12 weeks. Epidemiological evidence has long suggested sexual transmission, but partner treatment trials had previously shown no benefit.\nStudy design: Open-label RCT (the StepUp trial). 164 heterosexual monogamous couples where the woman had symptomatic BV. Standard care (female treatment only, n=83) vs. standard care plus male partner treatment with oral metronidazole BD and 2% clindamycin penile cream for 7 days (n=81).\nKey results: BV recurrence at 12 weeks: 35% in the intervention group vs. 63% in the control group - Trial stopped early at interim analysis due to demonstrated inferiority of standard care - Note: 14% of male partners took less than 70% of prescribed treatment.\nImpact: This study provides the strongest evidence to date that BV-associated bacteria are sexually transmitted. ACOG has since updated guidance to recommend considering concurrent partner therapy for recurrent BV."
+  },
+  {
+    "objectID": "posts/top10_2025.html#continuation-vs.-stopping-immunosuppression-during-infection-in-rheumatology-patients",
+    "href": "posts/top10_2025.html#continuation-vs.-stopping-immunosuppression-during-infection-in-rheumatology-patients",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "3. Continuation vs. Stopping Immunosuppression During Infection in Rheumatology Patients",
+    "text": "3. Continuation vs. Stopping Immunosuppression During Infection in Rheumatology Patients\nOpdam et al., Continuation Versus Temporary Interruption of Immunomodulatory Agents During Infections in Patients With Inflammatory Rheumatic Diseases: A Randomized Controlled Trial. Clinical Infectious Diseases. 2026;82(3):420-426. DOI: 10.1093/cid/ciaf442\nWhy it matters: Whether to pause immunomodulatory agents (IAs) during an acute infection is a common and often agonising clinical decision for physicians managing rheumatic disease patients. IAs may have long half-lives, help control underlying disease, and — in some contexts — may even be beneficial in infection.\nStudy design: Pragmatic, open-label, Dutch multicentre RCT of 1,142 patients with inflammatory rheumatic disease. Patients were randomised to either continue or temporarily interrupt IAs at the point of developing an infection.\nKey results: - Adjusted risk difference of 1.71% (95% CI: −1.99 to 5.39) in favour of continuation - No significant difference in duration of infectious symptoms or severity of rheumatological flare. The study was underpowered, but crucially identified no evidence of harm from continuation\nBottom line: Reassuring data that continuing immunosuppression through infection appears safe — though a larger definitive trial would be welcome."
+  },
+  {
+    "objectID": "posts/top10_2025.html#prophylactic-antibiotics-for-variceal-bleeding-in-cirrhosis-bayesian-meta-analysis",
+    "href": "posts/top10_2025.html#prophylactic-antibiotics-for-variceal-bleeding-in-cirrhosis-bayesian-meta-analysis",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "4. Prophylactic Antibiotics for Variceal Bleeding in Cirrhosis (Bayesian Meta-analysis)",
+    "text": "4. Prophylactic Antibiotics for Variceal Bleeding in Cirrhosis (Bayesian Meta-analysis)\nProsty et al., Prophylactic Antibiotics for Upper Gastrointestinal Bleeding in Patients With CirrhosisA Systematic Review and Bayesian Meta-Analysis. JAMA Internal Medicine 2025;185;(10):1194-1203. DOI: 10.1001/jamainternmed.2025.3832\nWhy it matters: Most guidelines recommend 5–7 days of IV antibiotic prophylaxis following upper GI bleeding in cirrhosis, based on older, small, single-centre trials with inconsistent outcome definitions. Third-generation cephalosporins are typically used, raising concerns about C. difficile risk.\nStudy design: Bayesian meta-analysis assessing all-cause mortality with a 5% non-inferiority margin, comparing short courses (0–3 days) versus longer antibiotic courses.\nKey results: 97% probability of non-inferiority for short courses or no antibiotics in terms of all-cause mortality. Short courses were inferior for development of subsequent infection, though certainty was low due to poor study quality.\n\nClinical implication: May support de-escalation of antibiotic duration after variceal bleeding in appropriately selected patients, reducing C. difficile risk."
+  },
+  {
+    "objectID": "posts/top10_2025.html#methenamine-hippurate-for-uti-prevention-in-older-women-impresu",
+    "href": "posts/top10_2025.html#methenamine-hippurate-for-uti-prevention-in-older-women-impresu",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "5. Methenamine Hippurate for UTI Prevention in Older Women (ImpresU)",
+    "text": "5. Methenamine Hippurate for UTI Prevention in Older Women (ImpresU)\nHeltveit-Olsen SR et al. Methenamine hippurate as prophylaxis for recurrent urinary tract infections in older women — a triple-blind, randomised, placebo-controlled, phase IV trial (ImpresU). Clin Microbiol Infect. 2025. DOI: 10.1016/j.cmi.2025.07.006\nWhy it matters: Although the ALTAR trial previously showed methenamine hippurate was non-inferior to prophylactic antibiotics in mixed-age women, there remained a need for evidence specifically in older women (≥70 years), who bear the highest UTI burden — and in a placebo-controlled design.\nStudy design: Triple-blinded RCT. Women ≥70 years with recurrent UTIs recruited from general practice across 4 European countries. 1g methenamine hippurate BD vs. placebo for 6 months, followed by 6 months drug-free follow-up.\nKey results: 87 UTIs in the intervention group vs. 111 in the placebo group over 6 months. Fewer UTIs requiring antibiotic treatment while on methenamine: incidence rate ratio 0.75 (95% CI 0.57–1.0, p=0.049). Importantly, UTI rate increased once methenamine was stopped: IRR 1.7 (95% CI 1.3–2.3, p&lt;0.001) raising questions about rebound risk"
+  },
+  {
+    "objectID": "posts/top10_2025.html#corticosteroids-in-non-hiv-pcp-pic-trial",
+    "href": "posts/top10_2025.html#corticosteroids-in-non-hiv-pcp-pic-trial",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "6. Corticosteroids in Non-HIV PCP (PIC Trial)",
+    "text": "6. Corticosteroids in Non-HIV PCP (PIC Trial)\nLemiale V et al. Adjunctive corticosteroids in non-AIDS patients with severe Pneumocystis jirovecii pneumonia (PIC): a multicentre, double-blind, randomised controlled trial. Lancet Respir Med. 2025. DOI: 10.1016/S2213-2600(25)00125-0\nWhy it matters: PCP in HIV-negative immunocompromised patients carries a hospital mortality of 30–50%, significantly higher than in HIV-positive patients (10–20%). Corticosteroids are established practice in HIV-associated PCP, but evidence in non-HIV patients was lacking.\nStudy design: Multicentre, double-blind, RCT at 27 hospitals in France. HIV-negative immunocompromised adults with confirmed PCP and acute hypoxaemia, within 7 days of starting anti-Pneumocystis treatment. IV methylprednisolone 30mg tapering over 21 days vs. placebo.\nKey results: Primary outcome 28-day mortality: HR 0.62 (95% CI 0.37–1.05), p=0.074 — did not reach significance. However, a Bayesian re-analysis incorporating data from the HIV trials found &gt;99.9% probability of benefit, with an odds ratio of 0.51 (95% credible interval 0.32–0.77).\n\nThe nuance: The frequentist primary analysis was negative, but the Bayesian lens is compelling. This is a classic case of an underpowered trial (due to the challenges in recruiting these patients) where the direction of effect and clinical logic is clear, even if the threshold for statistical significance wasn’t met. Most clinicians are likely to continue using steroids in severe non-HIV PCP."
+  },
+  {
+    "objectID": "posts/top10_2025.html#dots-dalbavancin-for-s.-aureus-bacteraemia",
+    "href": "posts/top10_2025.html#dots-dalbavancin-for-s.-aureus-bacteraemia",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "7. DOTS: Dalbavancin for S. aureus Bacteraemia",
+    "text": "7. DOTS: Dalbavancin for S. aureus Bacteraemia\nTurner NA et al. Dalbavancin for Treatment of Staphylococcus aureus Bacteremia: The DOTS Randomized Clinical Trial. JAMA. 2025;334(10):866–877. DOI: 10.1001/jama.2025.12543\nWhy it matters: Complicated SAB carries ~30% 1-year mortality and typically requires 4–8 weeks of IV antibiotics via a PICC line, with all the associated hazards: clots, catheter infections, restricted mobility, and the requirement for outpatient IV services. Dalbavancin, a long-acting lipoglycopeptide, requires only two doses (days 1 and 8) and no long-term IV access.\nStudy design: Open-label, assessor-masked, North American RCT (2021–2023). 200 patients with ‘complicated’ SAB (by the IDSA criteria) who had cleared their blood cultures after 72 hours–10 days of standard therapy, randomised 1:1 to dalbavancin (1500mg on days 1 and 8) or standard 4–8 week IV therapy.\nExclusions: CNS infection, left-sided endocarditis, planned right-sided valve surgery, unresected prosthetic material, polymicrobial infection, severe immunosuppression.\nKey results: - Primary outcome (DOOR score at day 70): probability of a superior outcome with dalbavancin was 47.7% (95% CI 39.8–55.7%) — did not meet superiority - Clinical efficacy at day 70: 73% dalbavancin vs. 72% standard (non-inferior) - Serious adverse events: 40% dalbavancin vs. 34% standard - Dalbavancin patients spent 1 fewer day in hospital on average\n\nInterpretation: Not superior by DOOR, but met non-inferiority. The pragmatic benefit of avoiding a PICC line may be the real story here, particularly for patients with difficult vascular access or social circumstances that preclude home IV therapy."
+  },
+  {
+    "objectID": "posts/top10_2025.html#cloceba-cefazolin-vs.-cloxacillin-for-mssa-bacteraemia",
+    "href": "posts/top10_2025.html#cloceba-cefazolin-vs.-cloxacillin-for-mssa-bacteraemia",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "8. CloCeBa: Cefazolin vs. Cloxacillin for MSSA Bacteraemia",
+    "text": "8. CloCeBa: Cefazolin vs. Cloxacillin for MSSA Bacteraemia\nBurdet C et al. Cloxacillin versus cefazolin for meticillin-susceptible Staphylococcus aureus bacteraemia (CloCeBa): a prospective, open-label, multicentre, non-inferiority, randomised clinical trial. Lancet. 2025;406(10517):2349–2359. DOI: 10.1016/S0140-6736(25)01624-1\nWhy it matters: Anti-staphylococcal penicillins (ASPs) such as cloxacillin (we use a close analogue flucloxacillin in the UK) are traditionally first-line for MSSA bacteraemia, but North Americans have typically favored the first-generation cehaplosporin, cefazolin. The latter is suspected to have lower AKI rates, and possible superior clinical outcomes.\nStudy design: Open-label, non-inferiority RCT at 21 French hospitals. Adults with MSSA bacteraemia (excluding those with intravascular implants or suspected CNS infection) randomised 1:1 to cefazolin or cloxacillin IV for the first 7 days.\nKey results: Cefazolin was non-inferior to cloxacillin using a 12% non-inferiority margin across composite outcomes of mortality, microbiological, and clinical endpoints. However, a signal toward possible inferiority was seen in patients with isolates carrying type A blaZ β-lactamase, warranting further attention. Significantly fewer adverse effects with cefazolin (mainly AKI).\nImplications: This has been slightly surpassed by the SNAP trial but it is reassuring to see pretty comparable results. Cefazolin can now be used as first-line for most MSSA bacteraemia, with the blaZ type caveat is an annoying side-note."
+  },
+  {
+    "objectID": "posts/top10_2025.html#alabama-penicillin-allergy-de-labelling-in-primary-care",
+    "href": "posts/top10_2025.html#alabama-penicillin-allergy-de-labelling-in-primary-care",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "9. ALABAMA: Penicillin Allergy De-labelling in Primary Care",
+    "text": "9. ALABAMA: Penicillin Allergy De-labelling in Primary Care\nSandoe JAT et al. Penicillin allergy assessment pathway versus usual clinical care for primary care patients with a penicillin allergy record in the UK (ALABAMA): an open-label, multicentre, randomised controlled trial. Lancet Prim Care. 2025;1:100006. DOI: 10.1016/S3050-5143(25)00006-8\nWhy it matters: Around 90% of penicillin allergy labels in primary care are incorrect. These labels drive avoidable use of broader-spectrum antibiotics, potenitally worsening outcomes and contributing to antimicrobial resistance. And Beta-lactams are the besta-lactams.\nStudy design: Pragmatic, open-label RCT across 51 NHS general practices in England. Patients with a penicillin allergy record and a recent antibiotic prescription (excluding anaphylaxis or SCAR) were randomised to a structured allergy assessment pathway (PAAP) vs. usual care.\nKey results: - N = 401 (PAAP) vs. 410 (usual care) - 91% of PAAP participants underwent testing → 92% overall negative - 64% proceeded directly to oral challenge (5.5% positive). 36% had skin testing first (2% positive on skin testing; 11% positive on subsequent oral challenge). 96% of those who tested negative successfully had the allergy removed from their records. Primary outcome: significantly more penicillin prescriptions in the de-labelled group, with lower “treatment response failure” rate.\nClinical significance: This is the first RCT to confirm that penicillin allergy de-labelling could be initiated in primary care. However, complex trial infrastructure, oversight by an immunologist and the need to do the actual challenges in secondary care mean some logistical hurdles are yet to be overcome. The SystmOne-integrated pathway could support a broader implementation."
+  },
+  {
+    "objectID": "posts/top10_2025.html#harvest-high-dose-rifampicin-for-tb-meningitis",
+    "href": "posts/top10_2025.html#harvest-high-dose-rifampicin-for-tb-meningitis",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "10: HARVEST — High-Dose Rifampicin for TB Meningitis",
+    "text": "10: HARVEST — High-Dose Rifampicin for TB Meningitis\nMeya DB, Cresswell FV et al. Trial of High-Dose Oral Rifampin in Adults with Tuberculous Meningitis. N Engl J Med. 2025;393(24):2434–2446. DOI: 10.1056/NEJMoa2502866\nWhy it matters: TB meningitis carries mortality and disability rates above 50%, even with standard treatment. The standard rifampicin dose (~10mg/kg) achieves poor CNS penetration. High-dose rifampicin improves penetration and has shown survival signals in early phase trials.\nStudy design: Phase III, double-blind, randomised, placebo-controlled trial in Uganda, South Africa, and Indonesia. Patients with possible/probable/confirmed TB meningitis (HIV+ or −) randomised to standard treatment with standard dose rifampicin vs. 35mg/kg oral rifampicin for the induction phase.\nKey results: There were numerically (but not statistically significantly) worse outcomes in the high dose group. Those with HIV on ART and those with &lt;5 cells/μl did worse.\n\nSummary: This is a disappointing result from a well conducted trial."
+  },
+  {
+    "objectID": "posts/top10_2025.html#remap-cap-steroids-in-severe-cap",
+    "href": "posts/top10_2025.html#remap-cap-steroids-in-severe-cap",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "11: REMAP-CAP — Steroids in Severe CAP",
+    "text": "11: REMAP-CAP — Steroids in Severe CAP\nREMAP-CAP Investigators, Angus DC. Effect of hydrocortisone on mortality in patients with severe community-acquired pneumonia: The REMAP-CAP Corticosteroid Domain Randomized Clinical Trial. Intensive Care Med. 2025;51(4):665–680. DOI: 10.1007/s00134-025-07861-w\nWhy it matters: Following the CAPE-COD trial (which showed hydrocortisone significantly reduced 28-day mortality in severe CAP), guidelines were updated to recommend steroids in ICU CAP. REMAP-CAP followed this and found something troubling.\nStudy design: Large adaptive platform trial using Bayesian adaptive randomisation. ICU adults with CAP (±shock, ±influenza) randomised to 50mg QDS hydrocortisone for 7 days vs. control. Primary endpoint: 90-day mortality.\nKey results: 90-day mortality: 9.8% (control) vs. 15% (hydrocortisone) — the wrong direction.\nPre-specified stopping rule for futility triggered: &lt;5% chance of &gt;20% benefit. Probabilities of superiority (OR &lt; 1) ranged from 9–16% across shock/flu subgroups, far below conventional thresholds\n\nInterpretation: These findings are in direct conflict with CAPE-COD and a 2025 meta-analysis (Smit et al., benefit in those with CRP &gt;204 mg/L). The discrepancy is the subject of active debate, with an important note that the REMAP-CAP adaptive design and errors in randomisation process early on resulted in highly unequal group sizes (536 hydrocortisone vs. 122 control). The steroid-in-CAP story is very much unresolved and another arm of this trial (adaptive steroids in response to shock) remains under recruitment."
+  },
+  {
+    "objectID": "posts/top10_2025.html#sonia-steroids-in-pneumonia-in-kenya",
+    "href": "posts/top10_2025.html#sonia-steroids-in-pneumonia-in-kenya",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "11.5: SONIA — Steroids in Pneumonia in Kenya",
+    "text": "11.5: SONIA — Steroids in Pneumonia in Kenya\nLucinde RK et al. A Pragmatic Trial of Glucocorticoids for Community-Acquired Pneumonia. N Engl J Med. 2025;393(22):2187–2197. DOI: 10.1056/NEJMoa2507100\nWhy it matters: Mortality from CAP in sub-Saharan Africa is up to 5 times higher than in high-income settings. The evidence base for steroids in CAP had been generated almost entirely in well-resourced ICUs. SONIA specifically asked whether a cheap, oral steroid course could help in a general ward, low-resource setting.\nStudy design: Pragmatic, open-label, RCT across 18 Kenyan public hospitals. 2,180 adults with clinical CAP randomised to 10 days of low-dose oral glucocorticoids (dexamethasone, hydrocortisone, methylprednisolone, or prednisolone) vs. standard care.\nKey results: - 30-day mortality: 22.6% (steroids) vs. 26% (standard care) — HR 0.84 (95% CI 0.73–0.97, p=0.02) - 211/1,089 patients had an adverse event; 30% felt to be related to treatment (34 tuberculosis cases, 35 hyperglycaemia events). A nice counterweight to REMAP-CAP: steroids appear beneficial here, although the context is radically different."
+  },
+  {
+    "objectID": "posts/top10_2025.html#keep-an-eye-out-for-dabigatran-for-s.-aureus-bacteraemia",
+    "href": "posts/top10_2025.html#keep-an-eye-out-for-dabigatran-for-s.-aureus-bacteraemia",
+    "title": "Top 10 (ish) papers of 2025",
+    "section": "Keep an Eye Out For: Dabigatran for S. aureus Bacteraemia?",
+    "text": "Keep an Eye Out For: Dabigatran for S. aureus Bacteraemia?\nDOI: 10.1136/bmjopen-2025-107493\nAn emerging area of interest – whether anticoagulation with dabigatran may have an adjunctive role in the management of Staphylococcus aureus bacteraemia (SAB), given the role of fibrin in biofilm formation and vegetation development.\nThis presents a trial protocol for what seems like a mad idea, but seemingly one with solid preliminary data."
+  },
+  {
+    "objectID": "posts/hello-world.html",
+    "href": "posts/hello-world.html",
+    "title": "What are we doing here?",
+    "section": "",
+    "text": "This is the start of a blog and website that I have made, mostly with the aim of staying up to date with clinical research whilst I am away doing a (quite niche) PhD. If anyone else finds it useful along the way, so much the better.\nYou will see under the Latest Papers tab above there is a rolling feed of papers from some of the high impact journals.\nMy plan is use this space to write:\n\nShort summaries and reviews of recently published infection papers I find interesting, and I think might be clinically useful\nMaybe occasional longer pieces on epidemiology and disease dynamics\n\nIf anyone reading this would like to join me in writing these synopses/reviews, that would be amazing. You can either email me the summary and I’ll publish it or there are some instructions on how you can do it directly with Quarto and git in the README."
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "An amazing, diverse podcast hosted by Sara Dong, an American ID attending. Topics range between clinical ID, epidemiology and management. The website has summaries and infographics from the episodes.\n\n\n\n\n\n\n\n\n\n\nA UK based infection podcast. Hosted by Jame and Callum, this was initially a microbiology flavoured podcast, aimed at UK based infection trainees sitting their speciality exams. With time the remit has broaden and is relevant to anyone working in clinical infection medicine.\n\n\n\n\n\n\n\n\n\n\nThis is a fortnightly rundown of recently released infectious diseases literature. This is the second incarnation of this podcast. The original was made by the inimitable Mark Crislip and was revived by the prolific Sara Dong and Daniel Griffin. The original version of this is one of the reasons I chose infection medicine, and although this reboot lacks some of the acerbic wit of Mark Crislip it is just as informative.\n\n\n\n\n\n\n\n\n\n\nSecond entry from Daniel Griffin, along with Vincent Racaniello and Christina Naula. This podcast takes the form of a clinical case, followed by (possibly too many) responses from readers and a clinical discussion.\nThere are also versions of this for microbiology and virology with a different set of hosts and slightly different formats.\n\n\n\n\n\n\n\n\n\n\nA podcast from the editorial team at CMI communications. They cover a wide range of clinical infection topics, beyond simply promoting article in their journal."
+  },
+  {
+    "objectID": "resources.html#podcasts",
+    "href": "resources.html#podcasts",
+    "title": "Resources",
+    "section": "",
+    "text": "An amazing, diverse podcast hosted by Sara Dong, an American ID attending. Topics range between clinical ID, epidemiology and management. The website has summaries and infographics from the episodes.\n\n\n\n\n\n\n\n\n\n\nA UK based infection podcast. Hosted by Jame and Callum, this was initially a microbiology flavoured podcast, aimed at UK based infection trainees sitting their speciality exams. With time the remit has broaden and is relevant to anyone working in clinical infection medicine.\n\n\n\n\n\n\n\n\n\n\nThis is a fortnightly rundown of recently released infectious diseases literature. This is the second incarnation of this podcast. The original was made by the inimitable Mark Crislip and was revived by the prolific Sara Dong and Daniel Griffin. The original version of this is one of the reasons I chose infection medicine, and although this reboot lacks some of the acerbic wit of Mark Crislip it is just as informative.\n\n\n\n\n\n\n\n\n\n\nSecond entry from Daniel Griffin, along with Vincent Racaniello and Christina Naula. This podcast takes the form of a clinical case, followed by (possibly too many) responses from readers and a clinical discussion.\nThere are also versions of this for microbiology and virology with a different set of hosts and slightly different formats.\n\n\n\n\n\n\n\n\n\n\nA podcast from the editorial team at CMI communications. They cover a wide range of clinical infection topics, beyond simply promoting article in their journal."
+  },
+  {
+    "objectID": "resources.html#alerts",
+    "href": "resources.html#alerts",
+    "title": "Resources",
+    "section": "Alerts",
+    "text": "Alerts\n\nESCMID Epi Alerts\n\n\n\n\n\nA succint weekly summary of global emerging infections and outbreaks from the new-ish Emerging Infections Subcomittee from ESCMID."
+  }
+]
