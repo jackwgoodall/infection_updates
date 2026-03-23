@@ -1,7 +1,6 @@
 project:
   type: website
   output-dir: docs
-  resources: "/*"
 
 website:
   title: "Infection Research Updates"
@@ -33,4 +32,3 @@ format:
     css: styles.css
     toc: true
     toc-depth: 2
-    base-url: ""
