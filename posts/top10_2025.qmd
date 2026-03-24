@@ -2,7 +2,7 @@
 title: "Top 10 (ish) papers of 2025"
 author: "[Jack Goodall](/about.qmd#jack-goodall)"
 description: "A highly subjective run down of the top infection papers of 2025"
-date: 23-03-2026
+date: 03-23-2026
 categories: ["Top 10 Papers", "Dengue", "Bacterial Vaginosis", "Immunosuppression", PCP, SAB, CAP]
 ---
 

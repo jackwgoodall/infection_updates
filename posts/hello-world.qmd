@@ -2,7 +2,7 @@
 title: "What are we doing here?"
 description: "Getting this site up and running, and what I plan to write about."
 author: "[Jack Goodall](/about.qmd#jack-goodall)"
-date: 20-03-2026
+date: 03-20-2026
 categories: [Intro]
 ---
 
