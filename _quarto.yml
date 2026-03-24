@@ -6,6 +6,7 @@ project:
 website:
   title: "Infection Research Updates"
   description: "Infectious disease researcher — notes, papers, and resouces"
+  favicon: logos/feather.svg
   site-url: https://jackwgoodall.github.io/infection_updates/
   navbar:
     left:
