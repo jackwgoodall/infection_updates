@@ -5,7 +5,7 @@ project:
 
 website:
   title: "Infection Research Updates"
-  description: "Infectious disease researcher — notes, papers, and tools"
+  description: "Infectious disease researcher — notes, papers, and resouces"
   site-url: https://jackwgoodall.github.io/infection_updates/
   navbar:
     left:

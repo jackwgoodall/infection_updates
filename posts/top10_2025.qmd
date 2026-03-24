@@ -1,11 +1,14 @@
 ---
 title: "Top 10 (ish) papers of 2025"
 author: "[Jack Goodall](/about.qmd#jack-goodall)"
+description: "A highly subjective run down of the top infection papers of 2025"
 date: 23-03-2026
-categories: [MDR, Antibiotics, Pseudomonas]
+categories: ["Top 10 Papers", "Dengue", "Bacterial Vaginosis", "Immunosuppression", PCP, SAB, CAP]
 ---
 
 Along with my colleague [Hermaleigh Townsley](https://orcid.org/0000-0002-2517-722X) I made this run down of the top, practice changing papers of 2025. It was originally a presentation to our clinical ID department in Sheffield and I've stripped out the summaries for this post.
+
+We have aimed to primarily include papers that we think are of clinical relevance.
 
 It is heavily inspired by the wonderful summaries that [Josh Davis](https://aimed.net.au/2025/03/04/top-10-infectious-diseases-papers-2024-prof-josh-davis/) has been doing for several years (he was joined this year by Steve Tong, Emily McDonald and Bassem Ghanem).
 
