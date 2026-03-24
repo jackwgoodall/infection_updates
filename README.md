@@ -17,27 +17,21 @@ The website is live at:
 ---
 title: "Your post title"
 description: "One sentence summary"
-date: 20-03-2026
-author: "[Your Name](/about.qmd#your-name)"
-categories: [infectious disease, AMR]
+date: 03-20-2026                               # American date system
+author: "[Your Name](/about.qmd#your-name)"    # If you add a bio to the about section this will link to it
+categories: ["Staph aureus", AMR]              # Anything with a space in needs quotes. Please see if a tag has been used before and copy exactly if it has
 ---
 ```
 
 3. Write your post in Markdown below the `---`
-4. The [Quarto website](https://quarto.org/docs/authoring/markdown-basics.html) is great for some basic formatting - but if you've used another type of markdown before these are pretty similar
-4. Add a brief bio to the about.qmd file
-5. You can render the site locally (if you've made a Quarto Website project the you can `Render Website` in the build pane)
-5. Open a pull request to the main branch (which I've confusingly called gh-pages) when you're happy with it
-6. I'll accept it and GitHub Actions (should) rebuild the site automatically
+4. Any images can be added. Please save these in "posts/images/your_post"
+5. The [Quarto website](https://quarto.org/docs/authoring/markdown-basics.html) is great for some basic formatting - but if you've used another type of markdown before these are pretty similar
+6. Add a brief bio to the about.qmd file 
+7. You can render the site locally to see how it looks (if you've made a Quarto Website project the you can `Render Website` in the build pane)
+8. Open a pull request to the main branch (which I've confusingly called gh-pages) when you're happy with it
+9. I'll accept it and GitHub Actions (should) rebuild the site automatically
 
-## Preview locally
-
-```bash
-quarto preview
-```
-
-This opens a live preview in your browser. No need to push to see changes. 
-(I've save the 'docs' folder this creates in the .gitignore so feel free to render locally - these files shouldn't be uploaded)
+## Updating
 
 ---
 
