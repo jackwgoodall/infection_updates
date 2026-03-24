@@ -15,6 +15,8 @@ website:
         text: Blog
       - href: papers.qmd
         text: Latest Papers
+      - href: resources.qmd
+        text: Useful Resources
       - href: about.qmd
         text: About
     right:
