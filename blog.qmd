@@ -12,3 +12,5 @@ page-layout: full
 title-block-banner: false
 toc: false
 ---
+
+Please do [get in touch](/about.qmd#jack-goodall) if you would like to suggest a paper to review or (even better) write one yourself. <br><br>
