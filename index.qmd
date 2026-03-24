@@ -12,7 +12,7 @@ This site is home to brief summaries of clinical infection papers I found intere
 ::: {.g-col-12 .g-col-md-6}
 ### Latest posts
 
-The [Blog](blog.qmd) has spotlights on individual, recent papers that I think are clinically important.
+The [Blog](blog.qmd) spotlights individual, recent papers that I think are clinically important.
 
 Please do [get in touch](about.qmd) with suggestions for papers to review, or (even better) if you want to write the review. The [README](https://github.com/jackwgoodall/infection_updates/blob/bea938c8d2bb57bd3e73f7e6a2026a687197d232/README.md) on the main github has a guide to writing a blog post (or I will happily post it for you). 
 :::
