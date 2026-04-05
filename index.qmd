@@ -1,18 +1,17 @@
 ---
-title: "Infectious Disease Research Updates"
-subtitle: "A blog and paper search tool for infection clinicians"
+title: "Infectious Disease and Global Health Research Updates"
 page-layout: full
 toc: false
 ---
 
-This site is home to brief summaries of clinical infection papers I found interesting and an [OpenAlex](https://openalex.org/) powered feed of high impact infection papers.
+This site is home to brief summaries of clinical infection and global health papers and a curated [OpenAlex](https://openalex.org/) feed of high impact research papers.
 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
 ### Latest posts
 
-The [Blog](blog.qmd) spotlights individual, recent papers that I think are clinically important.
+The [Blog](blog.qmd) spotlights individual, recent papers that we think are interesting or important.
 
 Please do [get in touch](about.qmd) with suggestions for papers to review, or (even better) if you want to write the review. The [README](https://github.com/jackwgoodall/infection_updates/blob/bea938c8d2bb57bd3e73f7e6a2026a687197d232/README.md) on the main github has a guide to writing a blog post (or I will happily post it for you). 
 :::
@@ -20,7 +19,7 @@ Please do [get in touch](about.qmd) with suggestions for papers to review, or (e
 ::: {.g-col-12 .g-col-md-6}
 ### What's publishing now
 
-The [Latest Papers](papers.qmd) page pulls recent publications in real time from OpenAlex.  It shows all recent publications across infectious disease, microbiology, virology, parasitology and epidemiology from selected high-impact journals. 
+The [*Infection Papers*](papers.qmd) page pulls recent publications in real time from OpenAlex.  It shows all recent publications across infectious disease, microbiology, virology, parasitology and epidemiology from selected high-impact journals.  The [*Global Health Papers*](GH_papers.qmd) does the same for global heath journals, and high impact papers that are tagged with the [sustainable development goals](https://sdgs.un.org/goals). 
 
 Please do [get in touch](about.qmd) if you have journals you think should be included or have ways you think this feed could be improved.
 :::

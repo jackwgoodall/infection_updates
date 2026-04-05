@@ -15,7 +15,9 @@ website:
       - href: blog.qmd
         text: Blog
       - href: papers.qmd
-        text: Latest Papers
+        text: Infection Papers
+      - href: GH_papers.qmd
+        text: Global Health Papers
       - href: resources.qmd
         text: Useful Resources
       - href: about.qmd

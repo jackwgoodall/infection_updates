@@ -3,7 +3,7 @@ title: "Ceftolozane-tazobactam vs. ceftazidime-avibactam for MDR/DTR *Pseudomona
 author: "[Jack Goodall](/about.qmd#jack-goodall)"
 description: "A systematics review and meta-analysis"
 date: 03-23-2026
-categories: [MDR, Antibiotics, Pseudomonas]
+categories: [MDR, Antibiotics, Pseudomonas, "Infection Medicine"]
 ---
 
 **Title:** Comparison of ceftolozane-tazobactam and ceftazidime-avibactam in the treatment of MDR/DTR *Pseudomonas aeruginosa* infections: a systematic review and meta-analysis
@@ -50,6 +50,6 @@ Clinical cure was higher in those treated with ceftolozane-tazobactam with and o
 
 Three studies reported 90-day resistance, two reported microbiological failure and four reported 30-day mortality with no significant differences found between these two end points.
 
-## Summary 
+## Summary
 
 This isn't perfect - all the studies included were observation and the risk of bias was high. They went able to do an individual-patient level meta-analysis and so are reliant on how well the original studies adjusted for confounders. However, this is an important and frequently encountered clinical question – and currently this seems to be me to be the best we have.

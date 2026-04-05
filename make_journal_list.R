@@ -30,12 +30,32 @@ Ajournals <- c(
 
 Bjournals <- c(
   "The Lancet",
-  "The New England Journal of Medicine",
+  "New England Journal of Medicine",
   "BMJ",
   "Proceedings of the National Academy of Sciences",
-  "JAMA"
+  "JAMA",
+  "PLoS Medicine"
 )
 
+GHjournals <- c("The Lancet Global Health",
+                "BMJ Global Health",
+                "Journal of Global Health",
+                "Annals of Global Health",
+                "Globalization and Health",
+                "The Lancet",
+                "BMJ",
+                "New England Journal of Medicine",
+                "JAMA",
+                "PLoS Medicine")
+
+GH_results <- lapply(GHjournals, function(jn) {
+  oa_fetch(entity = "sources", search = jn)
+}) %>% bind_rows()
+
+
+GH_results_filtered <- GH_results %>%
+  filter(display_name %in% GHjournals 
+         & last_publication_year >= as.numeric(format(Sys.Date(), "%Y"))-1)
 
 main_results <- lapply(Ajournals, function(jn) {
   oa_fetch(entity = "sources", search = jn)

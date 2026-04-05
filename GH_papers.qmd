@@ -1,24 +1,34 @@
 ---
-title: "Latest Papers"
+title: "Global Health Papers"
 toc: false
 page-layout: full
 ---
 
 Results pulled live from [OpenAlex's](https://openalex.org) API each time you load this page. Use the filters to narrow by topic, journal, or date.<br>
-All journals and topics are selected by default.  You can toggle off the ones you want and the search button to update.<br>
-Please [get in touch](about.qmd) with suggestions on journals to add or ways to improve this feed.
-
+All journals and topics are selected by default. You can toggle off the ones you want and click the search button to update.<br>
+Please [get in touch](about.qmd) with suggestions on journals to add or ways to improve this feed. <br>
+All papers are included from the Global Health specialist journals, and only papers tagged with one or more of the sustainable development goals are included from the high-impact generalist journals. 
 
 ```{=html}
-<div class="section-label">Filter by topic (optional)</div>
-<div class="concept-tags" id="conceptTags">
-  <span class="concept-tag" data-id="C524204448">Infectious disease</span>
-  <span class="concept-tag" data-id="C398037181">Antimicrobial resistance</span>
-  <span class="concept-tag" data-id="C185592680">Epidemiology</span>
-  <span class="concept-tag" data-id="C509974204">Virology</span>
-  <span class="concept-tag" data-id="C150903083">Immunology</span>
-  <span class="concept-tag" data-id="C203014093">Tropical disease</span>
-  <span class="concept-tag" data-id="C142724271">Vaccination</span>
+<div class="section-label" style="margin-top: 12px;">Filter by SDG (optional)</div>
+<div class="concept-tags" id="sdgTags">
+  <span class="concept-tag" data-id="1">SDG 1: No poverty</span>
+  <span class="concept-tag" data-id="2">SDG 2: Zero hunger</span>
+  <span class="concept-tag" data-id="3">SDG 3: Good health</span>
+  <span class="concept-tag" data-id="4">SDG 4: Quality education</span>
+  <span class="concept-tag" data-id="5">SDG 5: Gender equality</span>
+  <span class="concept-tag" data-id="6">SDG 6: Clean water &amp; sanitation</span>
+  <span class="concept-tag" data-id="7">SDG 7: Clean energy</span>
+  <span class="concept-tag" data-id="8">SDG 8: Decent work</span>
+  <span class="concept-tag" data-id="9">SDG 9: Industry &amp; innovation</span>
+  <span class="concept-tag" data-id="10">SDG 10: Reduced inequalities</span>
+  <span class="concept-tag" data-id="11">SDG 11: Sustainable cities &amp; communities</span>
+  <span class="concept-tag" data-id="12">SDG 12: Responsible consumption &amp; production</span>
+  <span class="concept-tag" data-id="13">SDG 13: Climate action</span>
+  <span class="concept-tag" data-id="14">SDG 14: Life below water</span>
+  <span class="concept-tag" data-id="15">SDG 15: Life on land</span>
+  <span class="concept-tag" data-id="16">SDG 16: Peace, justice &amp; strong institutions</span>
+  <span class="concept-tag" data-id="17">SDG 17: Partnerships</span>
 </div>
 
 <hr class="oa-divider">
@@ -35,29 +45,18 @@ Please [get in touch](about.qmd) with suggestions on journals to add or ways to 
 
   <div class="oa-filter-group" style="grid-column: 1 / -1;">
     <label>Journals</label>
-    <div class="team-label">Infection Jurn <span class="team-note">— all papers</span></div>
+    <div class="team-label">Specialist Global Health Journals <span class="team-note">— all papers</span></div>
     <div class="concept-tags" id="aJournalTags" style="margin: 4px 0 8px;">
-      <span class="concept-tag active" data-id="S23772524" data-team="A">The Lancet Infectious Diseases</span>
-      <span class="concept-tag active" data-id="S2531945440" data-team="A">The Lancet HIV</span>
-      <span class="concept-tag active" data-id="S19579164" data-team="A">Journal of Infection</span>
-      <span class="concept-tag active" data-id="S87161179" data-team="A">Journal of Hospital Infection</span>
-      <span class="concept-tag active" data-id="S71414007" data-team="A">Clinical Microbiology and Infection</span>
-      <span class="concept-tag active" data-id="S2735126445" data-team="A">Open Forum Infectious Diseases</span>
-      <span class="concept-tag active" data-id="S72350973" data-team="A">Clinical Infectious Diseases</span>
-      <span class="concept-tag active" data-id="S46544255" data-team="A">PLoS Neglected Tropical Diseases</span>
-      <span class="concept-tag active" data-id="S53087977" data-team="A">Journal of Clinical Microbiology</span>
-      <span class="concept-tag active" data-id="S189281586" data-team="A">Emerging Infectious Diseases</span>
-      <span class="concept-tag active" data-id="S54542293" data-team="A">The Journal of Infectious Diseases</span>
-      <span class="concept-tag active" data-id="S171015910" data-team="A">BMC Infectious Diseases</span>
-      <span class="concept-tag active" data-id="S2764760790" data-team="A">Emerging Microbes &amp; Infections</span>
-      <span class="concept-tag active" data-id="S2004986" data-team="A">PLoS Pathogens</span>
-      <span class="concept-tag active" data-id="S2764926557" data-team="A">Nature Microbiology</span>
+      <span class="concept-tag active" data-id="S4210176958" data-team="A">The Lancet Global Health</span>
+      <span class="concept-tag active" data-id="S2764928273" data-team="A">BMJ Global Health</span>
+      <span class="concept-tag active" data-id="S2736978234" data-team="A">Journal of Global Health</span>
+      <span class="concept-tag active" data-id="S2765065622" data-team="A">Annals of Global Health</span>
+      <span class="concept-tag active" data-id="S112714904" data-team="A">Globalization and Health</span>
     </div>
-    <div class="team-label">Generalist Journals <span class="team-note">— infectious relevant papers only</span></div>
+    <div class="team-label">Generalist Journals <span class="team-note">— SDG-tagged papers only</span></div>
     <div class="concept-tags" id="bJournalTags" style="margin: 4px 0 0;">
       <span class="concept-tag active" data-id="S49861241" data-team="B">The Lancet</span>
       <span class="concept-tag active" data-id="S4393917726" data-team="B">BMJ</span>
-      <span class="concept-tag active" data-id="S125754415" data-team="B">PNAS</span>
       <span class="concept-tag active" data-id="S62468778" data-team="B">NEJM</span>
       <span class="concept-tag active" data-id="S172573765" data-team="B">JAMA</span>
       <span class="concept-tag active" data-id="S197939330" data-team="B">PLoS Medicine</span>
@@ -113,9 +112,28 @@ Please [get in touch](about.qmd) with suggestions on journals to add or ways to 
 <script>
   let currentPage = 1;
   let totalResults = 0;
-  let selectedConcepts = new Set();
+  let selectedSDGs = new Set();
 
-  // Initialise sets directly from rendered tags
+  const SDG_LABELS = {
+    1: 'SDG 1: No poverty',
+    2: 'SDG 2: Zero hunger',
+    3: 'SDG 3: Good health',
+    4: 'SDG 4: Quality education',
+    5: 'SDG 5: Gender equality',
+    6: 'SDG 6: Clean water & sanitation',
+    7: 'SDG 7: Clean energy',
+    8: 'SDG 8: Decent work',
+    9: 'SDG 9: Industry & innovation',
+    10: 'SDG 10: Reduced inequalities',
+    11: 'SDG 11: Sustainable cities & communities',
+    12: 'SDG 12: Responsible consumption & production',
+    13: 'SDG 13: Climate action',
+    14: 'SDG 14: Life below water',
+    15: 'SDG 15: Life on land',
+    16: 'SDG 16: Peace, justice & strong institutions',
+    17: 'SDG 17: Partnerships'
+  };
+
   const selectedAJournals = new Set(
     Array.from(document.querySelectorAll('#aJournalTags .concept-tag')).map(t => t.dataset.id)
   );
@@ -123,19 +141,16 @@ Please [get in touch](about.qmd) with suggestions on journals to add or ways to 
     Array.from(document.querySelectorAll('#bJournalTags .concept-tag')).map(t => t.dataset.id)
   );
 
-  // B-team filter: only show ID / microbiology / virology / parasitology subfields
-  const B_SUBFIELDS = 'topics.subfield.id:2725|2404|2726|2405';
-
   const today = new Date();
   const ago1w = new Date(today); ago1w.setDate(today.getDate() - 7);
   document.getElementById('fromDate').value = ago1w.toISOString().split('T')[0];
   document.getElementById('toDate').value = today.toISOString().split('T')[0];
 
-  document.querySelectorAll('#conceptTags .concept-tag').forEach(tag => {
+  document.querySelectorAll('#sdgTags .concept-tag').forEach(tag => {
     tag.addEventListener('click', () => {
       const id = tag.dataset.id;
-      if (selectedConcepts.has(id)) { selectedConcepts.delete(id); tag.classList.remove('active'); }
-      else { selectedConcepts.add(id); tag.classList.add('active'); }
+      if (selectedSDGs.has(id)) { selectedSDGs.delete(id); tag.classList.remove('active'); }
+      else { selectedSDGs.add(id); tag.classList.add('active'); }
     });
   });
 
@@ -155,12 +170,12 @@ Please [get in touch](about.qmd) with suggestions on journals to add or ways to 
     });
   });
 
-  function buildCommonFilters(journalIds) {
+  function buildCommonFilters(journalIds, sdgFilter = null) {
     const from = document.getElementById('fromDate').value;
     const to   = document.getElementById('toDate').value;
     const oa   = document.getElementById('oaFilter').value;
     let f = 'primary_location.source.id:' + Array.from(journalIds).join('|');
-    if (selectedConcepts.size > 0) f += ',concepts.id:' + Array.from(selectedConcepts).join('|');
+    if (sdgFilter) f += ',' + sdgFilter;
     if (from) f += ',from_publication_date:' + from;
     if (to)   f += ',to_publication_date:' + to;
     if (oa)   f += ',is_oa:' + oa;
@@ -172,7 +187,7 @@ Please [get in touch](about.qmd) with suggestions on journals to add or ways to 
     const pp   = document.getElementById('perPage').value;
     return 'https://api.openalex.org/works?filter=' + filters +
       '&sort=' + sort + '&per-page=' + pp + '&page=' + page +
-      '&select=id,title,doi,publication_date,primary_location,cited_by_count,open_access,authorships' +
+      '&select=id,title,doi,publication_date,primary_location,cited_by_count,open_access,authorships,sustainable_development_goals' +
       '&mailto=jackwgoodall@github';
   }
 
@@ -180,8 +195,8 @@ Please [get in touch](about.qmd) with suggestions on journals to add or ways to 
 
   async function doSearch(reset = true) {
     if (reset) currentPage = 1;
-    if (selectedAJournals.size === 0 && selectedBJournals.size === 0 && selectedConcepts.size === 0) {
-      showError('Please select at least one journal or topic.'); return;
+    if (selectedAJournals.size === 0 && selectedBJournals.size === 0) {
+      showError('Please select at least one journal.'); return;
     }
     const btn = document.getElementById('searchBtn');
     btn.disabled = true; btn.textContent = 'Searching\u2026';
@@ -191,14 +206,21 @@ Please [get in touch](about.qmd) with suggestions on journals to add or ways to 
     document.getElementById('paperList').innerHTML = '';
     document.getElementById('oaStats').style.display = 'none';
     document.getElementById('oaPagination').style.display = 'none';
+
+    // Build SDG filter string — use selected SDGs if any, otherwise all 1-17 for B-team
+    const sdgIds = selectedSDGs.size > 0
+      ? Array.from(selectedSDGs).join('|')
+      : Array.from({length: 17}, (_, i) => i + 1).join('|');
+    const sdgFilter = 'sustainable_development_goals.id:' + sdgIds;
+
     try {
       const fetches = [];
       if (selectedAJournals.size > 0) fetches.push(
-        fetch(buildBaseUrl(buildCommonFilters(selectedAJournals), currentPage))
+        fetch(buildBaseUrl(buildCommonFilters(selectedAJournals, null), currentPage))
           .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       );
       if (selectedBJournals.size > 0) fetches.push(
-        fetch(buildBaseUrl(buildCommonFilters(selectedBJournals) + ',' + B_SUBFIELDS, currentPage))
+        fetch(buildBaseUrl(buildCommonFilters(selectedBJournals, sdgFilter), currentPage))
           .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       );
       const results = await Promise.all(fetches);
@@ -223,7 +245,7 @@ Please [get in touch](about.qmd) with suggestions on journals to add or ways to 
       document.getElementById('oaStats').style.display = 'grid';
       document.getElementById('oaStatus').style.display = 'none';
       if (allWorks.length === 0) {
-        document.getElementById('oaStatus').textContent = 'No results \u2014 try widening your date range or selecting more topics.';
+        document.getElementById('oaStatus').textContent = 'No results \u2014 try widening your date range or selecting more journals.';
         document.getElementById('oaStatus').style.display = 'block';
       } else {
         renderPapers(allWorks);
@@ -258,14 +280,23 @@ Please [get in touch](about.qmd) with suggestions on journals to add or ways to 
       const more = (w.authorships && w.authorships.length > 3) ? ' +' + (w.authorships.length - 3) : '';
       const isOA = w.open_access && w.open_access.is_oa;
       const titleHtml = doiUrl ? '<a href="' + doiUrl + '" target="_blank">' + (w.title || 'Untitled') + '</a>' : (w.title || 'Untitled');
+
+      // Build SDG badges from the sustainable_development_goals field
+      const sdgBadges = (w.sustainable_development_goals || [])
+      .map(function(s) {
+        const num = parseInt(s.id.split('/').pop());
+        return '<span class="badge badge-year">SDG ' + num + '</span>';
+        }).join('');
+
       return '<div class="paper-card">' +
         '<div class="title">' + titleHtml + '</div>' +
         '<div class="authors">' + authors + more + '</div>' +
         '<div class="meta">' +
-        (journal ? '<span class="badge badge-journal">' + journal + '</span>' : '') +
-        (year ? '<span class="badge badge-year">' + year + '</span>' : '') +
-        (isOA ? '<span class="badge badge-oa">Open access</span>' : '') +
-        (cited > 0 ? '<span class="badge badge-cite">' + cited + ' citations</span>' : '') +
+       (journal ? '<span class="badge badge-journal">' + journal + '</span>' : '') +
+       (year ? '<span class="badge badge-year">' + year + '</span>' : '') +
+       sdgBadges +
+       (isOA ? '<span class="badge badge-oa">Open access</span>' : '') +
+       (cited > 0 ? '<span class="badge badge-cite">' + cited + ' citations</span>' : '') +
         '</div></div>';
     }).join('');
   }
