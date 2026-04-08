@@ -16,10 +16,11 @@ The HIV capsid is a cone-shaped protein container inside the HIV virion, which p
 
 Lenacapavir blocks HIV viral replication by interfering with the functioning of this capsid. Normally the monomers are bound quite loosely in their hexamers, which allows the host cell's nucleotides to flow though capsid shell, which the virus then uses to turn its RNA into DNA, ready for host integration. Lenacapavir binds to each of the monomers, increasing the overall rigidity of the hexamers they make up. The end result is that lenacapavir disrupts viral replication at multiple different stages of its life cycle, including importation into the nucleus, capsid uncoating, and the production of new viral particles.
 
-[![Binding of lenacapavir to the hexamers of the HIV capsid. \
-*Image from the CDC's Mini-Lecture Series: "HIV Capsid Inhibitors: Mechanism of Action"*](images/MSF_lenacapavir/structure.png){fig-align="left" width="600"}](https://www.youtube.com/watch?v=iZ9KDxV5Zbs)
+[![Binding of lenacapavir to the hexamers of the HIV capsid. Image from the CDC's Mini-Lecture Series: "HIV Capsid Inhibitors: Mechanism of Action"](images/MSF_lenacapavir/structure.png){fig-align="left" width="600"}](https://www.youtube.com/watch?v=iZ9KDxV5Zbs)
 
 It's a subcutaneous inject, taken every six months, and it's this long half-life, combined with negligible resistance rates that makes it such an appealing prospect.
+
+The use case that has emerged is as a HIV pre-exposure prophylactic and the evidence so far seems that it is highly effective in this role. Part of this seems to be that it removes the burden of taking a daily tablet, which can be both easier to conceal in places where HIV treatment remains stigmatised.
 
 ### The trials
 
