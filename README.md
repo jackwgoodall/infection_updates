@@ -1,6 +1,6 @@
 # For anyone wanting to write a new blog post
 
-The website is live at: 
+The website is live at: https://jackwgoodall.github.io/infection_updates/
 
 ## Open the project
 
